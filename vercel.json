@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".next/static",
+  "outputDirectory": ".next",
   "framework": "nextjs",
   "redirects": [],
   "rewrites": [],
