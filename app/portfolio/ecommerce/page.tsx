@@ -47,23 +47,23 @@ export default function EcommercePortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-20 pb-6 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-20 pb-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
+            <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 E-commerce Portfolio
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Successful online store growth and sales optimization across multiple categories
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-10 bg-muted/30">
+        <section className="py-14 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-10">Featured E-commerce Success Stories</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Featured E-commerce Success Stories</h2>
+            <div className="grid md:grid-cols-2 gap-10">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
                   <div className="h-48 bg-muted overflow-hidden">
@@ -78,9 +78,9 @@ export default function EcommercePortfolio() {
                       }}
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{project.name}</h3>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <div className="p-7">
+                    <h3 className="text-xl font-bold text-foreground mb-3">{project.name}</h3>
+                    <p className="text-muted-foreground mb-5 leading-relaxed">{project.description}</p>
                     <div className="flex items-center gap-2 p-3 bg-primary/10 rounded-lg">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                       <p className="text-sm font-semibold text-primary">{project.results}</p>
@@ -92,10 +92,10 @@ export default function EcommercePortfolio() {
           </div>
         </section>
 
-        <section className="py-10">
+        <section className="py-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-10">Why Choose Our E-commerce Solutions</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Why Choose Our E-commerce Solutions</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:shadow-lg transition-all text-center">
                   <benefit.icon className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -107,10 +107,10 @@ export default function EcommercePortfolio() {
           </div>
         </section>
 
-        <section className="py-10 bg-muted/30">
+        <section className="py-14 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-10">Our E-commerce Strategy</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our E-commerce Strategy</h2>
+            <div className="grid md:grid-cols-3 gap-10">
               {[
                 { step: "01", title: "Store Optimization", desc: "Improve product pages, navigation, and checkout experience" },
                 { step: "02", title: "Traffic Generation", desc: "Drive qualified buyers through multiple marketing channels" },
