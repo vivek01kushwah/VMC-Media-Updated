@@ -47,10 +47,10 @@ export default function HospitalPortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-28 pb-8 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-20 pb-6 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <div className="text-center mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Hospital & Healthcare Portfolio
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -60,9 +60,9 @@ export default function HospitalPortfolio() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-foreground mb-12">Featured Hospital & Healthcare Projects</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10">Featured Hospital & Healthcare Projects</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
@@ -92,9 +92,9 @@ export default function HospitalPortfolio() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-foreground mb-12">Why Choose Our Healthcare Marketing</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10">Why Choose Our Healthcare Marketing</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:shadow-lg transition-all text-center">
@@ -107,9 +107,9 @@ export default function HospitalPortfolio() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
+        <section className="py-10 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-foreground mb-12">Our Healthcare Marketing Strategy</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10">Our Healthcare Marketing Strategy</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { step: "01", title: "Service Promotion", desc: "Highlight specialized services and department expertise" },
