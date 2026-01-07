@@ -40,12 +40,6 @@ const WebDevelopmentService = () => {
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={() => router.push('/portfolio')}
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent text-accent font-semibold rounded-xl hover:bg-accent hover:text-white transition-all duration-300"
-                >
-                  View Our Work
-                </button>
               </div>
             </div>
             
@@ -261,9 +255,7 @@ const WebDevelopmentService = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Starter Website",
-                price: "$2,999",
-                timeline: "2-3 Weeks",
+                name: "Essential",
                 features: [
                   "Up to 5 Pages",
                   "Responsive Design",
@@ -274,9 +266,7 @@ const WebDevelopmentService = () => {
                 ]
               },
               {
-                name: "Business Website",
-                price: "$5,999",
-                timeline: "4-6 Weeks",
+                name: "Growth",
                 popular: true,
                 features: [
                   "Up to 15 Pages",
@@ -290,9 +280,7 @@ const WebDevelopmentService = () => {
                 ]
               },
               {
-                name: "E-Commerce / Custom",
-                price: "Custom",
-                timeline: "6-12 Weeks",
+                name: "Enterprise",
                 features: [
                   "Unlimited Pages",
                   "Custom Development",
@@ -314,7 +302,6 @@ const WebDevelopmentService = () => {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1 px-4 py-1 bg-accent text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 fill-current" />
                       Most Popular
                     </span>
                   </div>
@@ -322,11 +309,9 @@ const WebDevelopmentService = () => {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-accent mb-2">{pkg.price}</div>
-                  <div className="text-sm text-muted-foreground">{pkg.timeline} delivery</div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -334,17 +319,6 @@ const WebDevelopmentService = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button
-                  onClick={() => router.push('/contact')}
-                  className={`w-full py-3 rounded-xl font-semibold transition-all ${
-                    pkg.popular
-                      ? 'bg-gradient-to-r from-accent to-secondary text-white hover:scale-105'
-                      : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </button>
               </div>
             ))}
           </div>

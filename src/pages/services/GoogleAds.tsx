@@ -39,12 +39,6 @@ const GoogleAdsService = () => {
                   Get Free PPC Audit
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={() => router.push('/case-studies')}
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300"
-                >
-                  See Campaign Results
-                </button>
               </div>
             </div>
             
@@ -208,7 +202,7 @@ const GoogleAdsService = () => {
       </section>
 
       {/* Packages */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -223,8 +217,6 @@ const GoogleAdsService = () => {
             {[
               {
                 name: "Starter",
-                price: "$599/mo",
-                adSpend: "Up to $2,000/mo",
                 features: [
                   "1-2 Campaigns",
                   "Search Ads Only",
@@ -236,8 +228,6 @@ const GoogleAdsService = () => {
               },
               {
                 name: "Professional",
-                price: "$999/mo",
-                adSpend: "$2,000 - $10,000/mo",
                 popular: true,
                 features: [
                   "Multiple Campaigns",
@@ -252,8 +242,6 @@ const GoogleAdsService = () => {
               },
               {
                 name: "Enterprise",
-                price: "Custom",
-                adSpend: "$10,000+/mo",
                 features: [
                   "Unlimited Campaigns",
                   "All Campaign Types",
@@ -275,7 +263,6 @@ const GoogleAdsService = () => {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1 px-4 py-1 bg-primary text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 fill-current" />
                       Most Popular
                     </span>
                   </div>
@@ -283,11 +270,9 @@ const GoogleAdsService = () => {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-primary mb-2">{pkg.price}</div>
-                  <div className="text-sm text-muted-foreground">{pkg.adSpend} ad spend</div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -295,17 +280,6 @@ const GoogleAdsService = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button
-                  onClick={() => router.push('/contact')}
-                  className={`w-full py-3 rounded-xl font-semibold transition-all ${
-                    pkg.popular
-                      ? 'bg-gradient-to-r from-primary to-accent text-white hover:scale-105'
-                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </button>
               </div>
             ))}
           </div>

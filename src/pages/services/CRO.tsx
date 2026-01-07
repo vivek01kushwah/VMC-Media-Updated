@@ -39,12 +39,6 @@ const CRO = () => {
                   Get Free CRO Audit
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={() => router.push('/case-studies')}
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-secondary text-secondary font-semibold rounded-xl hover:bg-secondary hover:text-white transition-all duration-300"
-                >
-                  View Case Studies
-                </button>
               </div>
             </div>
             
@@ -185,7 +179,6 @@ const CRO = () => {
             {[
               {
                 name: "Essential",
-                price: "$1,499/mo",
                 features: [
                   "Monthly CRO Audit",
                   "2 A/B Tests/Month",
@@ -197,7 +190,6 @@ const CRO = () => {
               },
               {
                 name: "Professional",
-                price: "$2,999/mo",
                 popular: true,
                 features: [
                   "Weekly CRO Audits",
@@ -211,7 +203,6 @@ const CRO = () => {
               },
               {
                 name: "Enterprise",
-                price: "Custom",
                 features: [
                   "Continuous Optimization",
                   "Unlimited Testing",
@@ -232,7 +223,6 @@ const CRO = () => {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1 px-4 py-1 bg-secondary text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 fill-current" />
                       Most Popular
                     </span>
                   </div>
@@ -240,10 +230,9 @@ const CRO = () => {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-secondary mb-2">{pkg.price}</div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
@@ -251,17 +240,6 @@ const CRO = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button
-                  onClick={() => router.push('/contact')}
-                  className={`w-full py-3 rounded-xl font-semibold transition-all ${
-                    pkg.popular
-                      ? 'bg-gradient-to-r from-secondary to-accent text-white hover:scale-105'
-                      : 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </button>
               </div>
             ))}
           </div>

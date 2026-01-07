@@ -8,58 +8,31 @@ import { useRouter } from "next/navigation";
 
 const blogPosts = [
   {
-    title: "Top SEO Trends That Will Dominate Next Year",
-    excerpt: "Stay ahead of the competition with these cutting-edge SEO strategies that will shape the future of search rankings.",
-    image: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=600&h=400&fit=crop",
-    category: "SEO",
-    date: "Dec 1, 2024",
+    title: "AI-Powered SEO: How Machine Learning is Revolutionizing Search Rankings",
+    excerpt: "Discover how artificial intelligence is transforming SEO strategies and helping marketers achieve better search rankings through predictive analytics and automation.",
+    image: "https://loremflickr.com/600/400?lock=12",
+    category: "AI & SEO",
+    date: "Jan 7, 2025",
     author: "VMC Media Team",
-    slug: "top-seo-trends",
+    slug: "ai-powered-seo",
   },
   {
-    title: "How to Build a Strong Digital Marketing Strategy",
-    excerpt: "A comprehensive guide to creating a data-driven digital marketing strategy that delivers measurable results for your business.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    title: "Digital Marketing in 2025: The Role of AI and Machine Learning",
+    excerpt: "Explore how AI is reshaping digital marketing strategies, from content creation to customer personalization. Learn the tools and techniques driving marketing success.",
+    image: "https://loremflickr.com/600/400?lock=13",
     category: "Digital Marketing",
-    date: "Nov 28, 2024",
+    date: "Jan 5, 2025",
     author: "VMC Media Team",
-    slug: "digital-marketing-strategy",
+    slug: "ai-digital-marketing-2025",
   },
   {
-    title: "Why Every Business Needs a Website in 2025",
-    excerpt: "Discover the critical reasons why having a professional website is no longer optional but essential for business success.",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    category: "Web Development",
-    date: "Nov 25, 2024",
+    title: "Using AI for Content Optimization and SEO Strategy",
+    excerpt: "Master AI-driven content optimization techniques to improve your SEO performance, increase organic traffic, and rank higher for competitive keywords.",
+    image: "https://loremflickr.com/600/400?lock=14",
+    category: "AI & Content",
+    date: "Jan 3, 2025",
     author: "VMC Media Team",
-    slug: "website-importance-2025",
-  },
-  {
-    title: "Google Ads vs Facebook Ads: Which Is Better?",
-    excerpt: "An in-depth comparison of two major advertising platforms to help you choose the right one for your business goals.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-    category: "PPC Advertising",
-    date: "Nov 22, 2024",
-    author: "VMC Media Team",
-    slug: "google-ads-vs-facebook-ads",
-  },
-  {
-    title: "How to Improve Your Website Conversion Rate",
-    excerpt: "Proven tactics and optimization techniques to turn more visitors into customers and boost your bottom line.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    category: "Conversion Optimization",
-    date: "Nov 20, 2024",
-    author: "VMC Media Team",
-    slug: "improve-conversion-rate",
-  },
-  {
-    title: "The Power of Social Media Marketing in 2025",
-    excerpt: "Learn how to leverage social media platforms to build brand awareness, engage audiences, and drive business growth.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
-    category: "Social Media",
-    date: "Nov 18, 2024",
-    author: "VMC Media Team",
-    slug: "social-media-marketing-2025",
+    slug: "ai-content-optimization-seo",
   },
 ];
 
@@ -121,14 +94,6 @@ const Blog = () => {
                     {post.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 flex-1">{post.excerpt}</p>
-                  <Button 
-                    variant="link" 
-                    className="p-0 h-auto text-primary group/btn self-start"
-                    onClick={() => router.push(`/blog/${post.slug}`)}
-                  >
-                    Read More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
                 </div>
               </div>
             ))}

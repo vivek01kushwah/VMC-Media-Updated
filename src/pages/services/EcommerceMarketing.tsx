@@ -39,12 +39,6 @@ const EcommerceMarketingService = () => {
                   Grow Your Store
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button
-                  onClick={() => router.push('/case-studies')}
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent text-accent font-semibold rounded-xl hover:bg-accent hover:text-white transition-all duration-300"
-                >
-                  View Case Studies
-                </button>
               </div>
             </div>
             
@@ -185,8 +179,6 @@ const EcommerceMarketingService = () => {
             {[
               {
                 name: "Starter Store",
-                price: "$1,299/mo",
-                revenue: "Up to $50K/mo",
                 features: [
                   "Product Listing Optimization",
                   "Shopping Ads Setup",
@@ -197,8 +189,6 @@ const EcommerceMarketingService = () => {
               },
               {
                 name: "Growth Store",
-                price: "$2,499/mo",
-                revenue: "$50K - $250K/mo",
                 popular: true,
                 features: [
                   "Full Store Optimization",
@@ -212,8 +202,6 @@ const EcommerceMarketingService = () => {
               },
               {
                 name: "Enterprise Store",
-                price: "Custom",
-                revenue: "$250K+/mo",
                 features: [
                   "Custom E-commerce Strategy",
                   "Dedicated Account Manager",
@@ -234,7 +222,6 @@ const EcommerceMarketingService = () => {
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1 px-4 py-1 bg-accent text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 fill-current" />
                       Most Popular
                     </span>
                   </div>
@@ -242,11 +229,9 @@ const EcommerceMarketingService = () => {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-accent mb-2">{pkg.price}</div>
-                  <div className="text-sm text-muted-foreground">{pkg.revenue} revenue</div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -254,17 +239,6 @@ const EcommerceMarketingService = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button
-                  onClick={() => router.push('/contact')}
-                  className={`w-full py-3 rounded-xl font-semibold transition-all ${
-                    pkg.popular
-                      ? 'bg-gradient-to-r from-accent to-secondary text-white hover:scale-105'
-                      : 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </button>
               </div>
             ))}
           </div>

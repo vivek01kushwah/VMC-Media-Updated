@@ -1,0 +1,134 @@
+'use client'
+
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import { CheckCircle2, Users, Stethoscope, TrendingUp, Clock } from 'lucide-react';
+
+export default function HospitalPortfolio() {
+  const projects = [
+    {
+      id: 1,
+      name: "Multi-Specialty Hospital - Delhi",
+      description: "Comprehensive healthcare marketing for 500+ bed hospital with focus on specialized departments",
+      results: "8500 patient inquiries, 40% increase in OPD consultations",
+      image: "https://loremflickr.com/600/400?lock=7"
+    },
+    {
+      id: 2,
+      name: "Cardiac Care Center - Mumbai",
+      description: "Specialized cardiac services marketing targeting high-risk patients and referrals",
+      results: "320 cardiac procedures scheduled, 85% patient satisfaction",
+      image: "https://loremflickr.com/600/400?lock=8"
+    },
+    {
+      id: 3,
+      name: "Diagnostic Center Chain - Pan India",
+      description: "Multi-city diagnostic center promotion with online appointment booking system",
+      results: "12000 online bookings, 150% revenue increase",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop"
+    },
+    {
+      id: 4,
+      name: "Orthopedic & Joint Center - Bangalore",
+      description: "Specialized orthopedic services marketing for joint replacement and sports medicine",
+      results: "1850 patient registrations, 65 surgeries booked",
+      image: "https://loremflickr.com/600/400?lock=9"
+    }
+  ];
+
+  const benefits = [
+    { icon: Users, title: "Patient Acquisition", description: "Attract more patients through targeted healthcare marketing" },
+    { icon: TrendingUp, title: "Revenue Growth", description: "Increase OPD visits and specialized service utilization" },
+    { icon: Clock, title: "24/7 Availability", description: "Online appointment booking and emergency service promotion" },
+    { icon: Stethoscope, title: "Doctor Visibility", description: "Showcase specialist doctors and build trust with patients" }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <div className="flex-1">
+        <section className="pt-28 pb-8 bg-gradient-to-b from-primary/5 to-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                Hospital & Healthcare Portfolio
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Proven healthcare marketing strategies to increase patient engagement and hospital revenue
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12">Featured Hospital & Healthcare Projects</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {projects.map((project) => (
+                <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
+                  <div className="h-48 bg-muted overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.name} 
+                      className="w-full h-full object-cover" 
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(project.name)}`;
+                      }}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{project.name}</h3>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <div className="flex items-center gap-2 p-3 bg-primary/10 rounded-lg">
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                      <p className="text-sm font-semibold text-primary">{project.results}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12">Why Choose Our Healthcare Marketing</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:shadow-lg transition-all text-center">
+                  <benefit.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-foreground mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-foreground mb-12">Our Healthcare Marketing Strategy</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { step: "01", title: "Service Promotion", desc: "Highlight specialized services and department expertise" },
+                { step: "02", title: "Patient Acquisition", desc: "Multi-channel campaigns to attract new patients" },
+                { step: "03", title: "Retention & Growth", description: "Build patient loyalty and increase service utilization" }
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-2xl font-bold text-primary">{item.step}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc || item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </div>
+  );
+}

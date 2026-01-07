@@ -35,12 +35,10 @@ const Header = () => {
   };
 
   const portfolio = [
-    { name: "Case Studies", href: "/portfolio/case-studies", icon: FileText },
-    { name: "Completed Projects", href: "/portfolio/projects", icon: Briefcase },
-    { name: "Client Success Stories", href: "/portfolio/success-stories", icon: Award },
-    { name: "Branding Portfolio", href: "/portfolio/branding", icon: PenTool },
-    { name: "Website Design Portfolio", href: "/portfolio/websites", icon: Globe },
-    { name: "Digital Campaign Results", href: "/portfolio/campaigns", icon: TrendingUp },
+    { name: "Real Estate", href: "/portfolio/real-estate", icon: Globe },
+    { name: "College/Admission Consultancy", href: "/portfolio/college-consultancy", icon: Award },
+    { name: "Hospital", href: "/portfolio/hospital", icon: Shield },
+    { name: "Ecommerce", href: "/portfolio/ecommerce", icon: ShoppingCart },
   ];
 
   const pages = [
