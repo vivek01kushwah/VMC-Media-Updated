@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export', // Enable static export for GitHub Pages
+  // Removed: output: 'export' - Using server-side rendering for Vercel
   images: {
-    unoptimized: true, // Disable optimization for static export
+    unoptimized: false, // Enable optimization with server rendering
     domains: ['localhost', 'images.unsplash.com'],
   },
   basePath: '', // Change if repo name is not root
