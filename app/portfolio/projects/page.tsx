@@ -1,5 +1,3 @@
-'use client'
-
 import { motion } from "framer-motion"
 import { Briefcase, Calendar, ExternalLink } from "lucide-react"
 
