@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 60
+    }
+  },
+  "redirects": [],
+  "rewrites": [],
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}
