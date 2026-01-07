@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import '../src/index.css'
 import { Providers } from './providers'
 
+// Viewport is correctly defined as separate export (not in metadata)
+
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
