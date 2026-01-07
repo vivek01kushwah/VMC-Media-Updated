@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Search, Share2, Target, Globe, PenTool, TrendingUp, Mail, BarChart3, ShoppingCart, MapPin, Users, Award, Briefcase, FileText, DollarSign, MessageSquare, Shield, HelpCircle, ScrollText } from "lucide-react";
+import { Menu, X, ChevronDown, Search, Share2, Target, Globe, PenTool, TrendingUp, Mail, BarChart3, ShoppingCart, MapPin, Users, Award, Shield } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import ThemeToggle from "@/components/ThemeToggle";
 import GetStartedModal from "@/components/GetStartedModal";
@@ -39,17 +39,6 @@ const Header = () => {
     { name: "College/Admission Consultancy", href: "/portfolio/college-consultancy", icon: Award },
     { name: "Hospital", href: "/portfolio/hospital", icon: Shield },
     { name: "Ecommerce", href: "/portfolio/ecommerce", icon: ShoppingCart },
-  ];
-
-  const pages = [
-    { name: "About Company", href: "/pages/about", icon: Briefcase },
-    { name: "Our Team", href: "/pages/team", icon: Users },
-    { name: "Careers / Join Us", href: "/pages/careers", icon: Award },
-    // { name: "Pricing Plans", href: "/pages/pricing", icon: DollarSign },
-    { name: "Testimonials", href: "/pages/testimonials", icon: MessageSquare },
-    { name: "FAQ", href: "/pages/faq", icon: HelpCircle },
-    { name: "Terms & Conditions", href: "/pages/terms", icon: ScrollText },
-    { name: "Privacy Policy", href: "/pages/privacy", icon: Shield },
   ];
 
   const handleMouseEnter = (dropdown: string) => {
@@ -184,34 +173,6 @@ const Header = () => {
             </div>
 
             {/* Pages Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => handleMouseEnter("pages")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium py-2">
-                Pages <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "pages" ? "rotate-180" : ""}`} />
-              </button>
-              
-              {activeDropdown === "pages" && (
-                <div className="absolute top-full left-0 pt-2 w-72 animate-fade-in">
-                  <div className="bg-background border border-border rounded-xl shadow-2xl p-4">
-                  <div className="space-y-1">
-                    {pages.map((page) => (
-                      <NavLink
-                        key={page.href}
-                        to={page.href}
-                        className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/10 hover:text-primary transition-all group/item"
-                      >
-                        <page.icon className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium">{page.name}</span>
-                      </NavLink>
-                    ))}
-                  </div>
-                  </div>
-                </div>
-              )}
-            </div>
 
             <NavLink
               to="/blog"
@@ -323,32 +284,6 @@ const Header = () => {
                       >
                         <item.icon className="w-4 h-4" />
                         {item.name}
-                      </NavLink>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Pages Dropdown */}
-              <div className="border-b border-border pb-2">
-                <button
-                  onClick={() => toggleMobileDropdown("pages")}
-                  className="flex items-center justify-between w-full text-foreground hover:text-primary hover:bg-muted transition-all font-medium py-3 px-4 rounded-lg"
-                >
-                  Pages
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdown === "pages" ? "rotate-180" : ""}`} />
-                </button>
-                {mobileDropdown === "pages" && (
-                  <div className="mt-2 ml-4 space-y-1 animate-fade-in">
-                    {pages.map((page) => (
-                      <NavLink
-                        key={page.href}
-                        to={page.href}
-                        className="flex items-center gap-2 text-sm py-2 px-4 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <page.icon className="w-4 h-4" />
-                        {page.name}
                       </NavLink>
                     ))}
                   </div>
