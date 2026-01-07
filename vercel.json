@@ -2,11 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next/static",
   "framework": "nextjs",
-  "functions": {
-    "api/**/*.ts": {
-      "maxDuration": 60
-    }
-  },
   "redirects": [],
   "rewrites": [],
   "env": {
