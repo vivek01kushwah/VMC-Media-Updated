@@ -50,57 +50,46 @@ const Hero = () => {
                 </p>
             </StaggerItem>
 
-            {/* Social Proof - Simplified for performance */}
+            {/* Social Proof and CTA Button - Side by Side */}
             <StaggerItem>
-              <div className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-premium w-fit hover:scale-[1.02] transition-transform">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div 
-                      key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-secondary/20 border-2 border-card flex items-center justify-center text-xs font-bold text-accent"
-                    >
-                      {i}
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="flex gap-0.5">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                    <span className="text-sm font-semibold text-foreground">4.5/5</span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                {/* Social Proof on Left */}
+                <div className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-premium hover:scale-[1.02] transition-transform">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div 
+                        key={i}
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-accent/20 to-secondary/20 border-2 border-card flex items-center justify-center text-xs font-bold text-accent"
+                      >
+                        {i}
+                      </div>
+                    ))}
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">250+ projects</span> delivered
-                  </p>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="flex gap-0.5">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">4.5/5</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-semibold text-foreground">150+ projects</span> delivered
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </StaggerItem>
 
-            {/* CTA Buttons - Using CSS transitions instead of Framer Motion */}
-            <StaggerItem>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+                {/* Button on Right */}
                 <Button 
                   size="lg" 
                   onClick={() => router.push("/consultation")}
-                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 active:scale-95 transition-all duration-300 group h-12 px-6 text-base font-semibold rounded-xl"
+                  className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 active:scale-95 transition-all duration-300 group h-12 px-6 text-base font-semibold rounded-xl flex-1 sm:flex-none"
                 >
                   Get Free Consultation
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  onClick={() => router.push("/case-studies")}
-                  className="w-full sm:w-auto border-2 border-border hover:border-accent hover:text-accent hover:bg-accent/5 hover:scale-105 active:scale-95 group h-12 px-6 text-base font-semibold rounded-xl transition-all duration-300"
-                >
-                  View Case Studies
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-            </div>
+              </div>
             </StaggerItem>
 
             {/* Stats */}

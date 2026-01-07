@@ -8,7 +8,6 @@ const Services = dynamic(() => import("@/components/Services"), { ssr: false })
 const About = dynamic(() => import("@/components/About"), { ssr: false })
 const Stats = dynamic(() => import("@/components/Stats"), { ssr: false })
 const Portfolio = dynamic(() => import("@/components/Portfolio"), { ssr: false })
-const Testimonials = dynamic(() => import("@/components/Testimonials"), { ssr: false })
 const CTA = dynamic(() => import("@/components/CTA"), { ssr: false })
 
 export default function HomePage() {
@@ -20,7 +19,6 @@ export default function HomePage() {
       <About />
       <Stats />
       <Portfolio />
-      <Testimonials />
       <CTA />
       <Footer />
     </div>
