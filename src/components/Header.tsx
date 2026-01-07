@@ -55,8 +55,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="w-full px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center shadow-lg">
@@ -82,10 +82,10 @@ const Header = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-8">
             <NavLink
               to="/"
-              className="text-foreground hover:text-primary transition-colors font-medium py-2 relative group"
+              className="text-foreground hover:text-primary transition-colors font-medium px-1 py-2 relative group"
               activeClassName="text-primary"
             >
               Home
@@ -176,7 +176,7 @@ const Header = () => {
 
             <NavLink
               to="/blog"
-              className="text-foreground hover:text-primary transition-colors font-medium py-2 relative group"
+              className="text-foreground hover:text-primary transition-colors font-medium px-1 py-2 relative group"
             >
               Blog
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -184,7 +184,7 @@ const Header = () => {
 
             <NavLink
               to="/contact"
-              className="text-foreground hover:text-primary transition-colors font-medium py-2 relative group"
+              className="text-foreground hover:text-primary transition-colors font-medium px-1 py-2 relative group"
             >
               Contact Us
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -192,8 +192,8 @@ const Header = () => {
           </nav>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
-            <div className="hidden xl:flex items-center gap-2 px-4 py-2 bg-muted rounded-full">
+          <div className="flex items-center gap-4">
+            <div className="hidden xl:flex items-center gap-2 px-4 py-2 bg-muted rounded-full whitespace-nowrap">
               <span className="text-secondary font-semibold text-sm">Support:</span>
               <span className="text-foreground font-bold text-sm">+91 9250592505</span>
             </div>
@@ -215,8 +215,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in max-h-[calc(100vh-5rem)] overflow-y-auto">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden py-4 px-0 border-t border-border animate-fade-in max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <nav className="flex flex-col gap-2 px-4">
               <NavLink
                 to="/"
                 className="text-foreground hover:text-primary hover:bg-muted transition-all font-medium py-3 px-4 rounded-lg"
@@ -306,20 +306,22 @@ const Header = () => {
                 Contact Us
               </NavLink>
 
-              <div className="pt-4 px-4">
-                <div className="flex items-center gap-2 text-sm mb-3 p-3 bg-muted rounded-lg">
+              <div className="pt-4 mt-4 border-t border-border px-0">
+                <div className="flex items-center gap-2 text-sm mb-4 p-3 bg-muted rounded-lg mx-4">
                   <span className="text-secondary font-semibold">Support:</span>
                   <span className="text-foreground font-bold">+91 9250592505</span>
                 </div>
-                <Button 
-                  onClick={() => {
-                    setIsModalOpen(true);
-                    setIsMenuOpen(false);
-                  }}
-                  className="w-full bg-gradient-to-r from-accent to-secondary hover:from-accent/90 hover:to-secondary/90 text-white shadow-lg"
-                >
-                  Get Started
-                </Button>
+                <div className="px-4">
+                  <Button 
+                    onClick={() => {
+                      setIsModalOpen(true);
+                      setIsMenuOpen(false);
+                    }}
+                    className="w-full bg-gradient-to-r from-accent to-secondary hover:from-accent/90 hover:to-secondary/90 text-white shadow-lg"
+                  >
+                    Get Started
+                  </Button>
+                </div>
               </div>
             </nav>
           </div>
