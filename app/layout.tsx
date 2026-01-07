@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: 'Elevate your online presence with VMC Media. We craft customized digital marketing and SEO strategies to increase visibility, attract the right audience, and convert clicks into loyal customers.',
   authors: [{ name: 'VMC Media' }],
   keywords: ['digital marketing', 'SEO services', 'content marketing', 'social media marketing', 'PPC advertising', 'website optimization'],
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
   openGraph: {
     title: 'VMC Media - Full-Service Digital Marketing & SEO Partner',
     description: 'Custom digital marketing strategies for sustainable business growth',
