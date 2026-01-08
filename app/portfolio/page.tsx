@@ -4,8 +4,16 @@ import { useEffect } from 'react';
 
 export default function PortfolioRedirect() {
   useEffect(() => {
-    // Redirect to home page with portfolio section
+    // Redirect to home and scroll to portfolio section
     window.location.href = '/#portfolio';
+    
+    // Alternative: scroll after redirect
+    setTimeout(() => {
+      const portfolioSection = document.getElementById('portfolio');
+      if (portfolioSection) {
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
   }, []);
 
   return (

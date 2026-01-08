@@ -89,9 +89,9 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <Link href="/portfolio" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('portfolio')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
                   Portfolio
-                </Link>
+                </button>
               </li>
               <li>
                 <Link href="/blog" className="text-primary-foreground/80 hover:text-white transition-colors">
