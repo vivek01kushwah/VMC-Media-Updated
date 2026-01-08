@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const About = () => {
   return (
@@ -79,13 +78,6 @@ const About = () => {
                   <span className="text-sm text-foreground font-medium">{item}</span>
                 </div>
               ))}
-            </div>
-
-            <div className="pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
-                Learn More About Us
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
             </div>
           </div>
         </div>
