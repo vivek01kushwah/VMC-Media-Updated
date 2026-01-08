@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Real Estate",
     category: "SEO & Local Marketing",
-    image: "/real estate.png",
+    image: "/real Estate.png",
     result: "+185% Property Inquiries in 5 Months",
     color: "bg-accent",
     slug: "real-estate",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "College/Admission Consultancy",
     category: "Lead Generation & PPC",
-    image: "/College.png",
+    image: "/college.png",
     result: "650+ Student Enrollments | 5.2% Conversion",
     color: "bg-secondary",
     slug: "college-consultancy",

@@ -9,14 +9,14 @@ export default function CollegeConsultancyPortfolio() {
       name: "Top Engineering College - Delhi NCR",
       description: "Student recruitment campaign for premium engineering institute with emphasis on placement records",
       results: "3500 applications received, 42% increase in admissions",
-      image: "/College.png"
+      image: "/college.png"
     },
     {
       id: 2,
       name: "Medical College - Mumbai",
       description: "Comprehensive admission marketing for medical and dental programs across India",
       results: "2800 qualified leads, 380 students enrolled",
-      image: "/College.png"
+      image: "/college.png"
     },
     {
       id: 3,
