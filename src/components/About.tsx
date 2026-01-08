@@ -49,7 +49,9 @@ const About = () => {
 
           {/* Right Content */}
           <div className="space-y-3 sm:space-y-4 animate-fade-in mt-6 lg:mt-0" style={{ animationDelay: "0.2s" }}>
-            <span className="text-secondary font-semibold text-lg sm:text-xl uppercase tracking-wider">About VMC Media</span>
+            <div className="inline-block bg-secondary/20 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full">
+              <span className="text-secondary font-semibold text-sm sm:text-base uppercase tracking-wider">About VMC Media</span>
+            </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary leading-tight">
               Full-Service Digital Marketing Agency
             </h2>
