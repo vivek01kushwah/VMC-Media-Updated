@@ -1,15 +1,12 @@
 'use client'
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function PortfolioRedirect() {
-  const router = useRouter();
-
   useEffect(() => {
-    // Redirect to home page
-    router.push('/#portfolio');
-  }, [router]);
+    // Redirect to home page with portfolio section
+    window.location.href = '/#portfolio';
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center">
