@@ -1,13 +1,9 @@
 'use client'
 
+import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, X } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
-
-// Mock NavLink component for demonstration
-const NavLink = ({ to, children, className }: any) => (
-  <a href={to} className={className}>{children}</a>
-);
 
 const Footer = () => {
   const router = useRouter();
@@ -83,9 +79,9 @@ const Footer = () => {
             <h3 className="text-base font-bold mb-2">Quick Links</h3>
             <ul className="space-y-1.5 text-sm">
               <li>
-                <NavLink to="/" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <Link href="/" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li>
                 <button onClick={() => scrollToSection('about')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
@@ -93,19 +89,19 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
-                  Services
-                </button>
+                <Link href="/portfolio" className="text-primary-foreground/80 hover:text-white transition-colors">
+                  Portfolio
+                </Link>
               </li>
               <li>
-                <NavLink to="/blog" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <Link href="/blog" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Blog
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="/contact" className="text-primary-foreground/80 hover:text-white transition-colors">
+                <Link href="/contact" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Contact
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -115,29 +111,29 @@ const Footer = () => {
             <h3 className="text-base font-bold mb-2">Services</h3>
             <ul className="space-y-1.5 text-sm">
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/services/seo" className="text-primary-foreground/80 hover:text-white transition-colors">
                   SEO Services
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/services/smm" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Social Media Marketing
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/services/google-ads" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Google Ads & PPC
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/services/web-development" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Website Development
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/services/lead-generation" className="text-primary-foreground/80 hover:text-white transition-colors">
                   Lead Generation
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

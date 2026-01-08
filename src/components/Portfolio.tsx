@@ -45,7 +45,7 @@ const Portfolio = () => {
   const router = useRouter();
   
   return (
-    <section className="py-16 lg:py-20 bg-background">
+    <section id="portfolio" className="py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-12 lg:mb-16 animate-fade-in">
           <span className="inline-block bg-secondary/20 px-6 py-2 rounded-full text-secondary font-semibold text-2xl tracking-wider">Our Portfolio</span>
