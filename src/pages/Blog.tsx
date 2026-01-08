@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -65,15 +66,12 @@ const Blog = () => {
                 className="group overflow-hidden rounded-lg border border-border bg-card hover:shadow-xl transition-all duration-300 flex flex-col"
               >
                 <div className="relative overflow-hidden h-56 bg-muted">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
+                    fill
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = `https://placehold.co/600x400/1a1a1a/888888?text=${encodeURIComponent(post.category)}`;
-                    }}
                   />
                   <Badge className="absolute top-4 left-4 bg-secondary text-secondary-foreground z-10">
                     {post.category}
