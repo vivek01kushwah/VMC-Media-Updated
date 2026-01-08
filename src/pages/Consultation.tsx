@@ -111,7 +111,7 @@ const Consultation = () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Call Us</div>
-                      <div className="font-semibold text-foreground">+91 XXXXXXXXXX</div>
+                      <div className="font-semibold text-foreground">+91  9250592505</div>
                     </div>
                   </div>
                 </Card>
