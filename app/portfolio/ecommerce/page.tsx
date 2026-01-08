@@ -9,28 +9,28 @@ export default function EcommercePortfolio() {
       name: "Fashion E-commerce Store",
       description: "Multi-brand fashion platform with AI-driven recommendations and seasonal campaigns",
       results: "₹2.5 Cr annual revenue, 45% increase in repeat customers",
-      image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=400&fit=crop"
+      image: "/ecommerce.png"
     },
     {
       id: 2,
       name: "Electronics Marketplace - PAN India",
       description: "Large electronics store with competitive pricing, live inventory, and fast delivery",
       results: "₹4.2 Cr quarterly sales, 3.2x ROAS on ad spend",
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop"
+      image: "/ecommerce.png"
     },
     {
       id: 3,
       name: "Organic & Wellness Products",
       description: "Niche e-commerce platform for organic and wellness products with subscription model",
       results: "₹85 Lakhs MRR, 60% subscription retention rate",
-      image: "https://loremflickr.com/600/400?lock=10"
+      image: "/ecommerce.png"
     },
     {
       id: 4,
       name: "Beauty & Cosmetics Store",
       description: "Beauty platform with influencer partnerships and user-generated content strategy",
       results: "₹1.8 Cr annual GMV, 250K active customers",
-      image: "https://loremflickr.com/600/400?lock=11"
+      image: "/ecommerce.png"
     }
   ];
 
@@ -70,10 +70,6 @@ export default function EcommercePortfolio() {
                       alt={project.name} 
                       className="w-full h-full object-cover" 
                       loading="lazy"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(project.name)}`;
-                      }}
                     />
                   </div>
                   <div className="p-7">

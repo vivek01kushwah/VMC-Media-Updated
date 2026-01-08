@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, TrendingUp } from "lucide-react";
-import heroImage from "@/assets/hero-woman.png";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -125,9 +124,11 @@ const Hero = () => {
               
               <div className="relative bg-gradient-to-br from-card to-muted/30 rounded-3xl p-4 sm:p-6 lg:p-8 border border-border/50 shadow-premium-lg backdrop-blur-sm">
                 <Image
-                  src={heroImage}
+                  src="/banner.png"
                   alt="Professional marketing expert"
-                  className="w-full h-auto max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] object-contain rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] object-cover rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
                   quality={85}
                 />
               </div>

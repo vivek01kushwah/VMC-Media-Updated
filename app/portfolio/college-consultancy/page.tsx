@@ -9,28 +9,28 @@ export default function CollegeConsultancyPortfolio() {
       name: "Top Engineering College - Delhi NCR",
       description: "Student recruitment campaign for premium engineering institute with emphasis on placement records",
       results: "3500 applications received, 42% increase in admissions",
-      image: "https://loremflickr.com/600/400?lock=5"
+      image: "/College.png"
     },
     {
       id: 2,
       name: "Medical College - Mumbai",
       description: "Comprehensive admission marketing for medical and dental programs across India",
       results: "2800 qualified leads, 380 students enrolled",
-      image: "https://loremflickr.com/600/400?lock=6"
+      image: "/College.png"
     },
     {
       id: 3,
       name: "Business School - Bangalore",
       description: "MBA and executive program marketing with focus on career outcomes and alumni network",
       results: "1200 applications, 85% conversion rate",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+      image: "/College.png"
     },
     {
       id: 4,
       name: "International Consultancy - Pan India",
       description: "Overseas admission counseling with visa and placement support highlighting",
       results: "950 students placed abroad, 65% increase in inquiries",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+      image: "/College.png"
     }
   ];
 
@@ -70,10 +70,6 @@ export default function CollegeConsultancyPortfolio() {
                       alt={project.name} 
                       className="w-full h-full object-cover" 
                       loading="lazy"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(project.name)}`;
-                      }}
                     />
                   </div>
                   <div className="p-7">

@@ -10,7 +10,7 @@ const blogPosts = [
   {
     title: "AI-Powered SEO: How Machine Learning is Revolutionizing Search Rankings",
     excerpt: "Discover how artificial intelligence is transforming SEO strategies and helping marketers achieve better search rankings through predictive analytics and automation.",
-    image: "https://loremflickr.com/600/400?lock=12",
+    image: "/Blog_1.png",
     category: "AI & SEO",
     date: "Jan 7, 2025",
     author: "VMC Media Team",
@@ -19,7 +19,7 @@ const blogPosts = [
   {
     title: "Digital Marketing in 2025: The Role of AI and Machine Learning",
     excerpt: "Explore how AI is reshaping digital marketing strategies, from content creation to customer personalization. Learn the tools and techniques driving marketing success.",
-    image: "https://loremflickr.com/600/400?lock=13",
+    image: "/Blog_2.png",
     category: "Digital Marketing",
     date: "Jan 5, 2025",
     author: "VMC Media Team",
@@ -28,7 +28,7 @@ const blogPosts = [
   {
     title: "Using AI for Content Optimization and SEO Strategy",
     excerpt: "Master AI-driven content optimization techniques to improve your SEO performance, increase organic traffic, and rank higher for competitive keywords.",
-    image: "https://loremflickr.com/600/400?lock=14",
+    image: "/Blog_3.png",
     category: "AI & Content",
     date: "Jan 3, 2025",
     author: "VMC Media Team",

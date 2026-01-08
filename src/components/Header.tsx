@@ -59,26 +59,11 @@ const Header = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center shadow-lg">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="w-6 h-6"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"
-                  fill="white"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              VMC Media
-            </span>
+            <img 
+              src="/logo vm.png" 
+              alt="VMC Media Logo" 
+              className="h-12 w-auto"
+            />
           </NavLink>
 
           {/* Desktop Navigation */}

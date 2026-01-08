@@ -9,28 +9,28 @@ export default function HospitalPortfolio() {
       name: "Multi-Specialty Hospital - Delhi",
       description: "Comprehensive healthcare marketing for 500+ bed hospital with focus on specialized departments",
       results: "8500 patient inquiries, 40% increase in OPD consultations",
-      image: "https://loremflickr.com/600/400?lock=7"
+      image: "/hospital.png"
     },
     {
       id: 2,
       name: "Cardiac Care Center - Mumbai",
       description: "Specialized cardiac services marketing targeting high-risk patients and referrals",
       results: "320 cardiac procedures scheduled, 85% patient satisfaction",
-      image: "https://loremflickr.com/600/400?lock=8"
+      image: "/hospital.png"
     },
     {
       id: 3,
       name: "Diagnostic Center Chain - Pan India",
       description: "Multi-city diagnostic center promotion with online appointment booking system",
       results: "12000 online bookings, 150% revenue increase",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop"
+      image: "/hospital.png"
     },
     {
       id: 4,
       name: "Orthopedic & Joint Center - Bangalore",
       description: "Specialized orthopedic services marketing for joint replacement and sports medicine",
       results: "1850 patient registrations, 65 surgeries booked",
-      image: "https://loremflickr.com/600/400?lock=9"
+      image: "/hospital.png"
     }
   ];
 
@@ -70,10 +70,6 @@ export default function HospitalPortfolio() {
                       alt={project.name} 
                       className="w-full h-full object-cover" 
                       loading="lazy"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(project.name)}`;
-                      }}
                     />
                   </div>
                   <div className="p-7">

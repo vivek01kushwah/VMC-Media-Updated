@@ -9,28 +9,28 @@ export default function RealEstatePortfolio() {
       name: "Luxury Apartment Complex - Delhi",
       description: "Marketed a premium 200-unit residential complex with SEO, digital ads, and virtual tours",
       results: "450 inquiries in 3 months, 85 units sold",
-      image: "https://loremflickr.com/600/400?lock=1"
+      image: "/Delhi.png"
     },
     {
       id: 2,
       name: "Commercial Real Estate - Bangalore",
       description: "Promoted office spaces and retail units across 5 locations with targeted campaigns",
       results: "1200 leads, 35 leases signed",
-      image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=400&fit=crop"
+      image: "/Bangalore.png"
     },
     {
       id: 3,
       name: "Residential Villas - Mumbai",
       description: "High-end villa community marketing with property showcase and buyer targeting",
       results: "280 qualified leads, 42 sales",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop"
+      image: "/Mumbai.png"
     },
     {
       id: 4,
       name: "Budget Housing Project - Pune",
       description: "Mass market housing project with social media and local SEO optimization",
       results: "2100 inquiries, 380 bookings",
-      image: "https://loremflickr.com/600/400?lock=4"
+      image: "/Pune.png"
     }
   ];
 
@@ -70,10 +70,6 @@ export default function RealEstatePortfolio() {
                       alt={project.name} 
                       className="w-full h-full object-cover" 
                       loading="lazy"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(project.name)}`;
-                      }}
                     />
                   </div>
                   <div className="p-7">

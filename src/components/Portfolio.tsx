@@ -8,9 +8,9 @@ import { useRouter } from "next/navigation";
 
 const projects = [
   {
-    title: "Real Estate Agency",
+    title: "Real Estate",
     category: "SEO & Local Marketing",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop",
+    image: "/real estate.png",
     result: "+185% Property Inquiries in 5 Months",
     color: "bg-accent",
     slug: "real-estate",
@@ -18,23 +18,23 @@ const projects = [
   {
     title: "College/Admission Consultancy",
     category: "Lead Generation & PPC",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop",
+    image: "/College.png",
     result: "650+ Student Enrollments | 5.2% Conversion",
     color: "bg-secondary",
     slug: "college-consultancy",
   },
   {
-    title: "Multi-Specialty Hospital",
+    title: "Hospital",
     category: "Digital Marketing & Branding",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
+    image: "/hospital.png",
     result: "+420% Patient Appointments Growth",
     color: "bg-primary",
     slug: "hospital",
   },
   {
-    title: "Ecommerce Store",
+    title: "Ecommerce",
     category: "Performance Marketing & CRO",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
+    image: "/ecommerce.png",
     result: "+340% Revenue | 65% Lower CAC",
     color: "bg-accent",
     slug: "ecommerce",

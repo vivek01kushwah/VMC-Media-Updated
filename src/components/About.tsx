@@ -12,15 +12,15 @@ const About = () => {
               {/* Main Large Image */}
               <div className="col-span-2 relative z-10 rounded-xl sm:rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop"
+                  src="/about top.png"
                   alt="Team collaboration"
                   className="w-full h-[180px] sm:h-[220px] lg:h-[240px] object-cover rounded-xl"
                 />
                 {/* Stats Badge */}
-                <div className="absolute bottom-2 sm:bottom-3 lg:bottom-4 left-2 sm:left-3 lg:left-4 bg-card p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl shadow-xl border border-border">
+                <div className="absolute bottom-2 sm:bottom-3 lg:bottom-4 left-2 sm:left-3 lg:left-4 bg-card p-1.5 sm:p-2 lg:p-3 rounded-lg sm:rounded-xl shadow-xl border border-border">
                   <div className="text-center">
-                    <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-0.5 sm:mb-1">14+</p>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground">Years Experience</p>
+                    <p className="text-lg sm:text-xl lg:text-2xl font-bold text-primary mb-0.5 sm:mb-1">14+</p>
+                    <p className="text-[9px] sm:text-xs text-muted-foreground">Years Exp</p>
                   </div>
                 </div>
               </div>
@@ -28,14 +28,14 @@ const About = () => {
               {/* Two Smaller Images Below */}
               <div className="relative rounded-lg sm:rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop"
+                  src="/about vmc Down.png"
                   alt="Team meeting"
                   className="w-full h-[100px] sm:h-[120px] lg:h-[140px] object-cover rounded-lg sm:rounded-xl"
                 />
               </div>
               <div className="relative rounded-lg sm:rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
+                  src="/image.png"
                   alt="Creative workspace"
                   className="w-full h-[100px] sm:h-[120px] lg:h-[140px] object-cover rounded-lg sm:rounded-xl"
                 />
