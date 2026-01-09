@@ -9,30 +9,30 @@ const SEOService = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-primary/10 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-200 rounded-full">
-                <Search className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-semibold text-blue-600">SEO Services</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                <Search className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-primary">SEO Services</span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Search Engine{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Optimization
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Dominate search results and drive organic traffic with our data-driven SEO strategies. We help your business rank higher, attract more qualified leads, and achieve sustainable growth.
               </p>
               
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => router.push('/contact')}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
                   Get Free SEO Audit
                   <ArrowRight className="w-5 h-5" />
@@ -52,13 +52,13 @@ const SEOService = () => {
       </section>
 
       {/* What We Offer */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               Comprehensive SEO Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From technical optimization to content strategy, we cover every aspect of SEO
             </p>
           </div>
@@ -98,13 +98,13 @@ const SEOService = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300"
+                className="bg-card p-8 rounded-2xl border border-border hover:border-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
@@ -116,7 +116,7 @@ const SEOService = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-foreground mb-6">
                 Why Choose Our SEO Services?
               </h2>
               <div className="space-y-4">
@@ -131,15 +131,15 @@ const SEOService = () => {
                   "ROI-focused approach"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                    <p className="text-lg text-gray-600">{benefit}</p>
+                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <p className="text-lg text-muted-foreground">{benefit}</p>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">SEO Process</h3>
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-10">
+              <h3 className="text-2xl font-bold text-foreground mb-6">SEO Process</h3>
               <div className="space-y-6">
                 {[
                   { step: "01", title: "Audit & Analysis", desc: "Comprehensive website and competitor analysis to identify opportunities" },
@@ -148,10 +148,10 @@ const SEOService = () => {
                   { step: "04", title: "Monitor & Optimize", desc: "Continuous tracking and strategy refinement for maximum results" }
                 ].map((item, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="text-3xl font-bold text-blue-200">{item.step}</div>
+                    <div className="text-3xl font-bold text-primary/30">{item.step}</div>
                     <div>
-                      <h4 className="text-lg font-bold text-gray-900 mb-1">{item.title}</h4>
-                      <p className="text-gray-600">{item.desc}</p>
+                      <h4 className="text-lg font-bold text-foreground mb-1">{item.title}</h4>
+                      <p className="text-muted-foreground">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -162,13 +162,13 @@ const SEOService = () => {
       </section>
 
       {/* SEO Packages */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               SEO Service Packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Choose the perfect plan for your business needs
             </p>
           </div>
@@ -216,27 +216,27 @@ const SEOService = () => {
             ].map((pkg, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-2xl p-8 border-2 ${
-                  pkg.popular ? 'border-blue-600 shadow-2xl scale-105' : 'border-gray-200'
+                className={`relative bg-card rounded-2xl p-8 border-2 ${
+                  pkg.popular ? 'border-primary shadow-2xl scale-105' : 'border-border'
                 } hover:shadow-xl transition-all duration-300`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 px-4 py-1 bg-blue-600 text-white text-sm font-semibold rounded-full">
+                    <span className="inline-flex items-center gap-1 px-4 py-1 bg-primary text-white text-sm font-semibold rounded-full">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
                 </div>
                 
                 <ul className="space-y-3">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-600">{feature}</span>
+                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -247,7 +247,7 @@ const SEOService = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Rank Higher?
@@ -257,7 +257,7 @@ const SEOService = () => {
           </p>
           <button
             onClick={() => router.push('/contact')}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             Get Free SEO Consultation
             <ArrowRight className="w-5 h-5" />

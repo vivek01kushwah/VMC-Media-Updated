@@ -23,7 +23,7 @@ const services = [
     icon: FileText,
     title: "Content Marketing & Blogging",
     description: "Long-form pillar content, blog strategies and localized content in Hindi and regional languages that attract, educate and convert Indian audiences — improving domain authority, search visibility and lead generation.",
-    color: "bg-primary",
+    color: "bg-accent",
     link: "/services/email-marketing",
   },
   {
@@ -44,7 +44,7 @@ const services = [
     icon: Globe,
     title: "Digital Marketing & Growth",
     description: "End-to-end growth strategies for Indian SMBs and enterprises — from full-funnel acquisition to CRO and marketplace growth. We blend technical SEO, e-commerce tactics and data-driven campaigns for sustainable, local-first expansion.",
-    color: "bg-primary",
+    color: "bg-accent",
     link: "/services/web-development",
   },
 ];

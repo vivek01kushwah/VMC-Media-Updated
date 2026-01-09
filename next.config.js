@@ -4,7 +4,16 @@ const nextConfig = {
   // Removed: output: 'export' - Using server-side rendering for Vercel
   images: {
     unoptimized: false, // Enable optimization with server rendering
-    domains: ['localhost', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
   basePath: '', // Change if repo name is not root
   assetPrefix: '',
