@@ -69,9 +69,10 @@ export default function HospitalPortfolio() {
                     <Image 
                       src={project.image} 
                       alt={project.name} 
-                      width={600}
-                      height={400}
+                      width={480}
+                      height={320}
                       priority
+                      loading="eager"
                       className="w-full h-full object-cover" 
                     />
                   </div>
