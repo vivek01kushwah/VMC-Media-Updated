@@ -70,6 +70,7 @@ export default function CollegeConsultancyPortfolio() {
                       src={project.image} 
                       alt={project.name} 
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       quality={85}
                       className="object-cover" 
                     />
