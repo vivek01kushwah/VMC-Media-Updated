@@ -1,6 +1,6 @@
 'use client'
 
-import { Search, BarChart3, Target, TrendingUp, FileText, Share2, Globe, PenTool, ArrowRight } from "lucide-react";
+import { Search, BarChart3, Target, TrendingUp, FileText, Share2, Globe, PenTool, ArrowRight, Zap, Users, Shield, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -46,6 +46,41 @@ const services = [
     description: "End-to-end growth strategies for Indian SMBs and enterprises — from full-funnel acquisition to CRO and marketplace growth. We blend technical SEO, e-commerce tactics and data-driven campaigns for sustainable, local-first expansion.",
     color: "bg-accent",
     link: "/services/web-development",
+  },
+  {
+    icon: PenTool,
+    title: "Branding & Design",
+    description: "Strategic brand identity, logo design, and visual guidelines that establish market leadership. We create memorable brand experiences across digital and print channels tailored to Indian audiences.",
+    color: "bg-secondary",
+    link: "/services/branding",
+  },
+  {
+    icon: Zap,
+    title: "Conversion Rate Optimization",
+    description: "A/B testing, user behavior analysis, and checkout flow optimization to reduce bounce rates and increase conversions. Data-driven improvements that directly impact your bottom line.",
+    color: "bg-accent",
+    link: "/services/cro",
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-commerce Marketing",
+    description: "Marketplace optimization, product listing strategies, and full-funnel e-commerce growth for Amazon, Flipkart, and independent stores. Maximize visibility and sales velocity.",
+    color: "bg-secondary",
+    link: "/services/ecommerce",
+  },
+  {
+    icon: Shield,
+    title: "Local SEO & Business Growth",
+    description: "Google Business Profile optimization, local citation building, and location-based SEO strategies to dominate local search results and attract nearby customers.",
+    color: "bg-accent",
+    link: "/services/local-seo",
+  },
+  {
+    icon: Users,
+    title: "Influencer & Reputation Marketing",
+    description: "Influencer partnerships, review management, and online reputation monitoring to build trust, manage brand perception, and amplify reach through authentic voices.",
+    color: "bg-secondary",
+    link: "/services/orm",
   },
 ];
 
@@ -153,7 +188,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
