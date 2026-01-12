@@ -50,6 +50,7 @@ const InfluencerMarketingService = () => {
                 height={320}
                 priority
                 loading="eager"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

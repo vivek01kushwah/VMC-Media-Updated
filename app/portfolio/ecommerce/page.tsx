@@ -73,6 +73,7 @@ export default function EcommercePortfolio() {
                       height={320}
                       priority
                       loading="eager"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="w-full h-full object-cover" 
                     />
                   </div>

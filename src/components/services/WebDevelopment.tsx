@@ -51,8 +51,7 @@ const WebDevelopmentService = () => {
                 width={480}
                 height={320}
                 priority
-                loading="eager"
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                loading="eager"                sizes="(max-width: 768px) 100vw, 50vw"                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>
