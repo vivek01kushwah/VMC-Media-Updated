@@ -11,7 +11,7 @@ const blogPosts = [
   {
     title: "AI-Powered SEO: How Machine Learning is Revolutionizing Search Rankings",
     excerpt: "Discover how artificial intelligence is transforming SEO strategies and helping marketers achieve better search rankings through predictive analytics and automation.",
-    image: "/blog_1.webp",
+    image: "/Blog_1.webp",
     category: "AI & SEO",
     date: "Jan 7, 2025",
     author: "VMC Media Team",
@@ -20,7 +20,7 @@ const blogPosts = [
   {
     title: "Digital Marketing in 2025: The Role of AI and Machine Learning",
     excerpt: "Explore how AI is reshaping digital marketing strategies, from content creation to customer personalization. Learn the tools and techniques driving marketing success.",
-    image: "/blog_2.webp",
+    image: "/Blog_2.webp",
     category: "Digital Marketing",
     date: "Jan 5, 2025",
     author: "VMC Media Team",
@@ -29,7 +29,7 @@ const blogPosts = [
   {
     title: "Using AI for Content Optimization and SEO Strategy",
     excerpt: "Master AI-driven content optimization techniques to improve your SEO performance, increase organic traffic, and rank higher for competitive keywords.",
-    image: "/blog_3.webp",
+    image: "/Blog_3.webp",
     category: "AI & Content",
     date: "Jan 3, 2025",
     author: "VMC Media Team",
@@ -70,7 +70,7 @@ const Blog = () => {
                     src={post.image}
                     alt={post.title}
                     fill
-                    priority
+                    quality={85}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <Badge className="absolute top-4 left-4 bg-secondary text-secondary-foreground z-10">

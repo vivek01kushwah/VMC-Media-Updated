@@ -65,16 +65,13 @@ export default function EcommercePortfolio() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-72 bg-muted overflow-hidden">
+                  <div className="h-72 bg-muted overflow-hidden relative">
                     <Image 
                       src={project.image} 
                       alt={project.name} 
-                      width={480}
-                      height={320}
-                      priority
-                      loading="eager"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="w-full h-full object-cover" 
+                      fill
+                      quality={85}
+                      className="object-cover" 
                     />
                   </div>
                   <div className="p-7">
