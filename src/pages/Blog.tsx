@@ -70,8 +70,8 @@ const Blog = () => {
                     src={post.image}
                     alt={post.title}
                     fill
+                    priority
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
                   />
                   <Badge className="absolute top-4 left-4 bg-secondary text-secondary-foreground z-10">
                     {post.category}

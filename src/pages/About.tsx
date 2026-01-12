@@ -1,3 +1,4 @@
+"use client";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, TrendingUp, Target, Lightbulb, Award } from "lucide-react";
@@ -266,4 +267,3 @@ const About = () => {
 };
 
 export default About;
-

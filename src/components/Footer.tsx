@@ -55,7 +55,7 @@ const Footer = () => {
               <span className="text-xl font-bold">VMC Media</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-3">
-              VMC Media Pvt. Ltd. is a Noida based digital agency specialising in local SEO, marketplace growth, WhatsApp lead funnels, and performance marketing for Indian brands.
+              VMC Media Pvt. Ltd. is a Noida(NCR) based digital marketing Company specialising in local SEO, marketplace growth, WhatsApp lead funnels, and performance marketing for Indian brands.
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -84,9 +84,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('about')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
+                <Link href="/pages/about" className="text-primary-foreground/80 hover:text-white transition-colors">
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
                 <button onClick={() => scrollToSection('portfolio')} className="text-primary-foreground/80 hover:text-white transition-colors text-left">
@@ -130,11 +130,7 @@ const Footer = () => {
                   Website Development
                 </Link>
               </li>
-              <li>
-                <Link href="/services/lead-generation" className="text-primary-foreground/80 hover:text-white transition-colors">
-                  Lead Generation
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
@@ -156,7 +152,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
                 <a href="tel:+919876543210" className="text-primary-foreground/80 hover:text-white transition-colors">
-                  +91 98765 43210
+                  +91 9250592505
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -165,12 +161,7 @@ const Footer = () => {
                   Info@vmcmedia.in
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-white transition-colors">
-                  https://wa.me/9250592505
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>

@@ -69,7 +69,6 @@ export default function CollegeConsultancyPortfolio() {
                       src={project.image} 
                       alt={project.name} 
                       className="w-full h-full object-cover" 
-                      loading="lazy"
                     />
                   </div>
                   <div className="p-7">

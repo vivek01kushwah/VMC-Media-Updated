@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Search, Share2, Target, Globe, PenTool, TrendingUp, Mail, BarChart3, ShoppingCart, MapPin, Users, Award, Shield } from "lucide-react";
+import { Menu, X, ChevronDown, Search, Share2, Target, Globe, PenTool, BarChart3, ShoppingCart, MapPin, Users, Award, Shield } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import ThemeToggle from "@/components/ThemeToggle";
 import GetStartedModal from "@/components/GetStartedModal";
@@ -22,10 +22,8 @@ const Header = () => {
       { name: "Google Ads & PPC Campaigns", href: "/services/google-ads", icon: Target },
       { name: "Website Development & UI/UX", href: "/services/web-development", icon: Globe },
       { name: "Content Creation & Branding", href: "/services/branding", icon: PenTool },
-      { name: "Lead Generation & Performance Marketing", href: "/services/lead-generation", icon: TrendingUp },
     ],
     additional: [
-      { name: "Email Marketing & Automation", href: "/services/email-marketing", icon: Mail },
       { name: "Conversion Rate Optimization", href: "/services/cro", icon: BarChart3 },
       { name: "E-commerce Marketing", href: "/services/ecommerce", icon: ShoppingCart },
       { name: "Local SEO Services", href: "/services/local-seo", icon: MapPin },
@@ -160,6 +158,14 @@ const Header = () => {
             {/* Pages Dropdown */}
 
             <NavLink
+              to="/pages/about"
+              className="text-foreground hover:text-primary transition-colors font-medium px-1 py-2 relative group"
+            >
+              About Us
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+            </NavLink>
+
+            <NavLink
               to="/blog"
               className="text-foreground hover:text-primary transition-colors font-medium px-1 py-2 relative group"
             >
@@ -274,6 +280,14 @@ const Header = () => {
                   </div>
                 )}
               </div>
+
+              <NavLink
+                to="/pages/about"
+                className="text-foreground hover:text-primary hover:bg-muted transition-all font-medium py-3 px-4 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </NavLink>
 
               <NavLink
                 to="/blog"

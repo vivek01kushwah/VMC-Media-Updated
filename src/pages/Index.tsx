@@ -3,7 +3,6 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
 import Portfolio from "@/components/Portfolio";
-import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import SEO from "@/components/SEO";
 
@@ -15,7 +14,6 @@ const Index = () => {
       <About />
       <Stats />
       <Portfolio />
-      <Testimonials />
       <CTA />    </div>
   );
 };

@@ -82,7 +82,7 @@ const Hero = () => {
                 {/* Button on Right */}
                 <Button 
                   size="lg" 
-                  onClick={() => router.push("/consultation")}
+                  onClick={() => setIsModalOpen(true)}
                   className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 active:scale-95 transition-all duration-300 group h-12 px-6 text-base font-semibold rounded-xl flex-1 sm:flex-none"
                 >
                   Get Free Consultation

@@ -122,7 +122,6 @@ const Contact = () => {
                       <option>Google Ads & PPC Campaigns</option>
                       <option>Website Development & UI/UX</option>
                       <option>Branding & Creative Services</option>
-                      <option>Lead Generation & Performance Marketing</option>
                       <option>Other</option>
                     </select>
                   </div>

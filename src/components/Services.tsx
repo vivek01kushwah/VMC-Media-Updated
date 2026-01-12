@@ -22,9 +22,9 @@ const services = [
   {
     icon: FileText,
     title: "Content Marketing & Blogging",
-    description: "Long-form pillar content, blog strategies and localized content in Hindi and regional languages that attract, educate and convert Indian audiences — improving domain authority, search visibility and lead generation.",
+    description: "Long-form pillar content, blog strategies and localized content in Hindi and regional languages that attract, educate and convert Indian audiences — improving domain authority, search visibility and customer engagement.",
     color: "bg-accent",
-    link: "/services/email-marketing",
+    link: "/services/branding",
   },
   {
     icon: Target,
