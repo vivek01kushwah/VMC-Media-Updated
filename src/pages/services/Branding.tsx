@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { PenTool, CheckCircle2, Palette, Target, TrendingUp, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -40,11 +41,14 @@ const BrandingService = () => {
               </button>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/brand.webp"
                 alt="Brand Design"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

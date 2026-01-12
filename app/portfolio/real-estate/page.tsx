@@ -1,5 +1,6 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import Image from "next/image";
 import { CheckCircle2, Home, MapPin, TrendingUp, Users } from 'lucide-react';
 
 export default function RealEstatePortfolio() {
@@ -9,28 +10,28 @@ export default function RealEstatePortfolio() {
       name: "Luxury Apartment Complex - Delhi",
       description: "Marketed a premium 200-unit residential complex with SEO, digital ads, and virtual tours",
       results: "450 inquiries in 3 months, 85 units sold",
-      image: "/Delhi.png"
+      image: "/Delhi.webp"
     },
     {
       id: 2,
       name: "Commercial Real Estate - Bangalore",
       description: "Promoted office spaces and retail units across 5 locations with targeted campaigns",
       results: "1200 leads, 35 leases signed",
-      image: "/Bangalore.png"
+      image: "/Bangalore.webp"
     },
     {
       id: 3,
       name: "Residential Villas - Mumbai",
       description: "High-end villa community marketing with property showcase and buyer targeting",
       results: "280 qualified leads, 42 sales",
-      image: "/Mumbai.png"
+      image: "/Mumbai.webp"
     },
     {
       id: 4,
       name: "Budget Housing Project - Pune",
       description: "Mass market housing project with social media and local SEO optimization",
       results: "2100 inquiries, 380 bookings",
-      image: "/Pune.png"
+      image: "/Pune.webp"
     }
   ];
 
@@ -45,7 +46,7 @@ export default function RealEstatePortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-20 pb-2 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-2 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -61,13 +62,16 @@ export default function RealEstatePortfolio() {
         <section className="pt-2 pb-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-8">Featured Real Estate Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-48 bg-muted overflow-hidden">
-                    <img 
+                  <div className="h-72 bg-muted overflow-hidden">
+                    <Image 
                       src={project.image} 
                       alt={project.name} 
+                      width={600}
+                      height={400}
+                      priority
                       className="w-full h-full object-cover" 
                     />
                   </div>

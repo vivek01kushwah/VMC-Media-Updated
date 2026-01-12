@@ -124,7 +124,7 @@ const Hero = () => {
               
               <div className="relative bg-gradient-to-br from-card to-muted/30 rounded-3xl p-4 sm:p-6 lg:p-8 border border-border/50 shadow-premium-lg backdrop-blur-sm">
                 <Image
-                  src="/banner.png"
+                  src="/banner.webp"
                   alt="Professional marketing expert"
                   width={600}
                   height={600}

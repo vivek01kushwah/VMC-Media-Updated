@@ -1,5 +1,6 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import Image from "next/image"
 import { CheckCircle2, ShoppingCart, TrendingUp, Zap, Users } from 'lucide-react';
 
 export default function EcommercePortfolio() {
@@ -9,28 +10,28 @@ export default function EcommercePortfolio() {
       name: "Fashion E-commerce Store",
       description: "Multi-brand fashion platform with AI-driven recommendations and seasonal campaigns",
       results: "₹2.5 Cr annual revenue, 45% increase in repeat customers",
-      image: "/ecommerce.png"
+      image: "/Fashion_E_Commerce.webp"
     },
     {
       id: 2,
       name: "Electronics Marketplace - PAN India",
       description: "Large electronics store with competitive pricing, live inventory, and fast delivery",
       results: "₹4.2 Cr quarterly sales, 3.2x ROAS on ad spend",
-      image: "/ecommerce.png"
+      image: "/electronics_pan_india.webp"
     },
     {
       id: 3,
       name: "Organic & Wellness Products",
       description: "Niche e-commerce platform for organic and wellness products with subscription model",
       results: "₹85 Lakhs MRR, 60% subscription retention rate",
-      image: "/ecommerce.png"
+      image: "/organic_wellness_product.webp"
     },
     {
       id: 4,
       name: "Beauty & Cosmetics Store",
       description: "Beauty platform with influencer partnerships and user-generated content strategy",
       results: "₹1.8 Cr annual GMV, 250K active customers",
-      image: "/ecommerce.png"
+      image: "/Beauty_cosmetics.webp"
     }
   ];
 
@@ -45,7 +46,7 @@ export default function EcommercePortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-20 pb-2 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-2 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -61,13 +62,16 @@ export default function EcommercePortfolio() {
         <section className="pt-2 pb-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-8">Featured E-commerce Success Stories</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-48 bg-muted overflow-hidden">
-                    <img 
+                  <div className="h-72 bg-muted overflow-hidden">
+                    <Image 
                       src={project.image} 
                       alt={project.name} 
+                      width={600}
+                      height={400}
+                      priority
                       className="w-full h-full object-cover" 
                     />
                   </div>

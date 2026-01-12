@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { Users, CheckCircle2, Star, Heart, TrendingUp, ArrowRight, Target, Share2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -41,11 +42,14 @@ const InfluencerMarketingService = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/influencer_marketing.webp"
                 alt="Influencer Marketing"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

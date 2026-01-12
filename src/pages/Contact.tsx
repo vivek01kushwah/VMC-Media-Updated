@@ -174,7 +174,7 @@ const Contact = () => {
                   <p className="mb-6 text-white/90">
                     Schedule a free consultation with our team to discuss your marketing goals.
                   </p>
-                  <Button size="lg" className="w-full bg-black text-secondary hover:bg-white/90">
+                  <Button size="lg" className="w-full bg-white text-secondary hover:bg-white/90">
                     Schedule Free Consultation
                   </Button>
                 </CardContent>

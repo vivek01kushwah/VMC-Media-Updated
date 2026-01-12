@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { ShoppingCart, CheckCircle2, TrendingUp, Target, Package, ArrowRight, Star, BarChart3, Users, Zap } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -42,11 +43,14 @@ const EcommerceMarketingService = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/ecommerce.webp"
                 alt="E-commerce Marketing"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

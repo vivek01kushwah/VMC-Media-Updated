@@ -11,7 +11,7 @@ const About = () => {
               {/* Main Large Image */}
               <div className="col-span-2 relative z-10 rounded-xl sm:rounded-2xl overflow-hidden">
                 <img
-                  src="/about top.png"
+                  src="/about top.webp"
                   alt="Team collaboration"
                   className="w-full h-[180px] sm:h-[220px] lg:h-[240px] object-cover rounded-xl"
                 />
@@ -27,14 +27,14 @@ const About = () => {
               {/* Two Smaller Images Below */}
               <div className="relative rounded-lg sm:rounded-xl overflow-hidden">
                 <img
-                  src="/about vmc Down.png"
+                  src="/about vmc Down.webp"
                   alt="Team meeting"
                   className="w-full h-[100px] sm:h-[120px] lg:h-[140px] object-cover rounded-lg sm:rounded-xl"
                 />
               </div>
               <div className="relative rounded-lg sm:rounded-xl overflow-hidden">
                 <img
-                  src="/image.png"
+                  src="/about vmc Down.webp"
                   alt="Creative workspace"
                   className="w-full h-[100px] sm:h-[120px] lg:h-[140px] object-cover rounded-lg sm:rounded-xl"
                 />

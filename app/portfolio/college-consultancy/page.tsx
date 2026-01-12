@@ -1,5 +1,6 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import Image from "next/image"
 import { CheckCircle2, Users, BookOpen, Target, TrendingUp } from 'lucide-react';
 
 export default function CollegeConsultancyPortfolio() {
@@ -9,28 +10,28 @@ export default function CollegeConsultancyPortfolio() {
       name: "Top Engineering College - Delhi NCR",
       description: "Student recruitment campaign for premium engineering institute with emphasis on placement records",
       results: "3500 applications received, 42% increase in admissions",
-      image: "/college.png"
+      image: "/Business_school.webp"
     },
     {
       id: 2,
       name: "Medical College - Mumbai",
       description: "Comprehensive admission marketing for medical and dental programs across India",
       results: "2800 qualified leads, 380 students enrolled",
-      image: "/college.png"
+      image: "/mumbai_college.webp"
     },
     {
       id: 3,
       name: "Business School - Bangalore",
       description: "MBA and executive program marketing with focus on career outcomes and alumni network",
       results: "1200 applications, 85% conversion rate",
-      image: "/College.png"
+      image: "/Delhi_college.webp"
     },
     {
       id: 4,
       name: "International Consultancy - Pan India",
       description: "Overseas admission counseling with visa and placement support highlighting",
       results: "950 students placed abroad, 65% increase in inquiries",
-      image: "/College.png"
+      image: "/college.webp"
     }
   ];
 
@@ -45,7 +46,7 @@ export default function CollegeConsultancyPortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-20 pb-2 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-2 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -61,13 +62,16 @@ export default function CollegeConsultancyPortfolio() {
         <section className="pt-2 pb-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-8">Featured College & Consultancy Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-48 bg-muted overflow-hidden">
-                    <img 
+                  <div className="h-72 bg-muted overflow-hidden">
+                    <Image 
                       src={project.image} 
                       alt={project.name} 
+                      width={600}
+                      height={400}
+                      priority
                       className="w-full h-full object-cover" 
                     />
                   </div>

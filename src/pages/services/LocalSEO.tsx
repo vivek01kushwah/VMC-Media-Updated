@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { MapPin, CheckCircle2, Store, Star, ArrowRight, Phone, Users, TrendingUp } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -41,11 +42,14 @@ const LocalSEO = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/local_seo.webp"
                 alt="Local SEO"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

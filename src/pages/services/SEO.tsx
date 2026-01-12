@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { Search, CheckCircle2, TrendingUp, Target, BarChart3, ArrowRight, MapPin, FileSearch, Link, Zap } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -40,11 +41,14 @@ const SEOService = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/seoService.webp"
                 alt="SEO Analytics"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

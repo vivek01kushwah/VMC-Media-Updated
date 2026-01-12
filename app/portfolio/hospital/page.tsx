@@ -1,5 +1,6 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import Image from "next/image"
 import { CheckCircle2, Users, Stethoscope, TrendingUp, Clock } from 'lucide-react';
 
 export default function HospitalPortfolio() {
@@ -9,28 +10,28 @@ export default function HospitalPortfolio() {
       name: "Multi-Specialty Hospital - Delhi",
       description: "Comprehensive healthcare marketing for 500+ bed hospital with focus on specialized departments",
       results: "8500 patient inquiries, 40% increase in OPD consultations",
-      image: "/hospital.png"
+      image: "/hospital_Delhi.webp"
     },
     {
       id: 2,
       name: "Cardiac Care Center - Mumbai",
       description: "Specialized cardiac services marketing targeting high-risk patients and referrals",
       results: "320 cardiac procedures scheduled, 85% patient satisfaction",
-      image: "/hospital.png"
+      image: "/hospital_mumbai.webp"
     },
     {
       id: 3,
       name: "Diagnostic Center Chain - Pan India",
       description: "Multi-city diagnostic center promotion with online appointment booking system",
       results: "12000 online bookings, 150% revenue increase",
-      image: "/hospital.png"
+      image: "/pan_india_daignostic.webp"
     },
     {
       id: 4,
       name: "Orthopedic & Joint Center - Bangalore",
       description: "Specialized orthopedic services marketing for joint replacement and sports medicine",
       results: "1850 patient registrations, 65 surgeries booked",
-      image: "/hospital.png"
+      image: "/orthopedic_bangalore.webp"
     }
   ];
 
@@ -45,7 +46,7 @@ export default function HospitalPortfolio() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
-        <section className="pt-20 pb-2 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-2 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-7">
@@ -61,13 +62,16 @@ export default function HospitalPortfolio() {
         <section className="pt-2 pb-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-foreground mb-8">Featured Hospital & Healthcare Projects</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-48 bg-muted overflow-hidden">
-                    <img 
+                  <div className="h-72 bg-muted overflow-hidden">
+                    <Image 
                       src={project.image} 
                       alt={project.name} 
+                      width={600}
+                      height={400}
+                      priority
                       className="w-full h-full object-cover" 
                     />
                   </div>

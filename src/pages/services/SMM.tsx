@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { Share2, CheckCircle2, Users, Heart, MessageCircle, TrendingUp, ArrowRight, Instagram, Facebook, Linkedin, Twitter, Youtube, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -40,11 +41,14 @@ const SMMService = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/social_media.webp"
                 alt="Social Media Marketing"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

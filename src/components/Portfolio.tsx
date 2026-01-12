@@ -5,12 +5,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Real Estate",
     category: "SEO & Local Marketing",
-    image: "/real Estate.png",
+    image: "/real Estate.webp",
     result: "+185% Property Inquiries in 5 Months",
     color: "bg-accent",
     slug: "real-estate",
@@ -18,7 +19,7 @@ const projects = [
   {
     title: "College/Admission Consultancy",
     category: "Lead Generation & PPC",
-    image: "/college.png",
+    image: "/college.webp",
     result: "650+ Student Enrollments | 5.2% Conversion",
     color: "bg-secondary",
     slug: "college-consultancy",
@@ -26,7 +27,7 @@ const projects = [
   {
     title: "Hospital",
     category: "Digital Marketing & Branding",
-    image: "/hospital.png",
+    image: "/hospital.webp",
     result: "+420% Patient Appointments Growth",
     color: "bg-primary",
     slug: "hospital",
@@ -34,7 +35,7 @@ const projects = [
   {
     title: "Ecommerce",
     category: "Performance Marketing & CRO",
-    image: "/ecommerce.png",
+    image: "/ecommerce.webp",
     result: "+340% Revenue | 65% Lower CAC",
     color: "bg-accent",
     slug: "ecommerce",
@@ -66,9 +67,12 @@ const Portfolio = () => {
               onClick={() => router.push(`/portfolio/${project.slug}`)}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={500}
+                  height={300}
+                  priority
                   className="w-full h-64 max-h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">

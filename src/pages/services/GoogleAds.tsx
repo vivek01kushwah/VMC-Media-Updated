@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { Target, CheckCircle2, TrendingUp, DollarSign, Zap, ArrowRight, MousePointer, Repeat, ShoppingCart, Star, BarChart3, Award } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -42,11 +43,14 @@ const GoogleAdsService = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/googleads.webp"
                 alt="Google Ads Dashboard"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>

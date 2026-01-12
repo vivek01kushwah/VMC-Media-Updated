@@ -1,6 +1,7 @@
 'use client'
 
 import SEO from "@/components/SEO";
+import Image from "next/image";
 import { Shield, CheckCircle2, Star, AlertCircle, TrendingUp, ArrowRight, Search, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -41,11 +42,14 @@ const ORM = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+            <div className="relative w-full h-auto">
+              <Image
+                src="/reputation.webp"
                 alt="Reputation Management"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={400}
+                priority
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>
@@ -91,7 +95,7 @@ const ORM = () => {
           </p>
           <button
             onClick={() => router.push('/contact')}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-accent font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-secondary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             Get Started
             <ArrowRight className="w-5 h-5" />

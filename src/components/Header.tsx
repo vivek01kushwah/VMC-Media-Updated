@@ -53,7 +53,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="w-full px-4 lg:px-6">
+      <div className="w-full px-4 lg:px-6 relative">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">

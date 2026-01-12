@@ -128,6 +128,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
           font-size: 14px;
           transition: all 0.2s ease;
           pointer-events: none;
+          z-index: 10;
         }
         
         .floating-select:focus ~ .floating-select-label,
@@ -137,6 +138,11 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
           font-size: 12px;
           color: hsl(var(--accent));
           font-weight: 500;
+        }
+        
+        .floating-label-container select {
+          position: relative;
+          z-index: 1;
         }
       `}</style>
 
@@ -169,7 +175,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
             <div className="text-center mb-4">
               <h2 className="text-xl font-bold text-gray-900 mb-1">Request a Free Audit</h2>
               <p className="text-[11px] text-gray-500">
-                Fill out the form and we will reach out via email or WhatsApp within 24 hours. Prefer WhatsApp? Message us at +91 98765 43210.
+                Fill out the form and we will reach out via email or WhatsApp within 24 hours.
               </p>
             </div>
 
