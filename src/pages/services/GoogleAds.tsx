@@ -45,7 +45,7 @@ const GoogleAdsService = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/googleads.webp"
+                src="/googleADS.webp"
                 alt="Google Ads Dashboard"
                 width={600}
                 height={400}

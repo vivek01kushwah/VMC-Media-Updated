@@ -44,7 +44,7 @@ const LocalSEO = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/local_seo.webp"
+                src="/Local_SEO.webp"
                 alt="Local SEO"
                 width={600}
                 height={400}

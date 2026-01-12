@@ -72,7 +72,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Preload critical assets */}
-        <link rel="preload" as="image" href="/logo-vm.webp" />
+        <link rel="preload" as="image" href="/logo vm.png" />
         
         {/* Favicon and manifest */}
         <link rel="icon" href="/favicon.ico" />
@@ -109,7 +109,7 @@ export default function RootLayout({
               '@type': 'Organization',
               name: 'VMC Media',
               url: 'https://vmcmedia.com',
-              logo: 'https://vmcmedia.com/logo-vm.webp',
+              logo: 'https://vmcmedia.com/logo vm.png',
               description: 'Full-service digital marketing and SEO partner specializing in growth strategies for Indian businesses',
               sameAs: [
                 'https://facebook.com/vmcmedia',

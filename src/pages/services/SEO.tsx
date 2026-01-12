@@ -43,7 +43,7 @@ const SEOService = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/seoService.webp"
+                src="/SeoService.webp"
                 alt="SEO Analytics"
                 width={600}
                 height={400}

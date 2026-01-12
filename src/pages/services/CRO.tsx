@@ -45,7 +45,7 @@ const CRO = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/cro.webp"
+                src="/CRO.webp"
                 alt="Conversion Optimization"
                 width={600}
                 height={400}

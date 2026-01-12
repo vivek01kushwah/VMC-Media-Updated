@@ -45,7 +45,7 @@ const EcommerceMarketingService = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/ecommerce.webp"
+                src="/Ecommerce.webp"
                 alt="E-commerce Marketing"
                 width={600}
                 height={400}

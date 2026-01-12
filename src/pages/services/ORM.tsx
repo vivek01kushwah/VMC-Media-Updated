@@ -44,7 +44,7 @@ const ORM = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/reputation.webp"
+                src="/Reputation.webp"
                 alt="Reputation Management"
                 width={600}
                 height={400}
