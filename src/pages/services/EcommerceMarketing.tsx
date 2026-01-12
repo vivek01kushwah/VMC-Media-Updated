@@ -47,9 +47,10 @@ const EcommerceMarketingService = () => {
               <Image
                 src="/Ecommerce.webp"
                 alt="E-commerce Marketing"
-                width={600}
-                height={400}
+                width={480}
+                height={320}
                 priority
+                loading="eager"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

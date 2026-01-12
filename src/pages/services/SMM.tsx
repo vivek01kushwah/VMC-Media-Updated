@@ -43,11 +43,12 @@ const SMMService = () => {
             
             <div className="relative w-full h-auto">
               <Image
-                src="/social_media.webp"
+                src="/Social_media.webp"
                 alt="Social Media Marketing"
-                width={600}
-                height={400}
+                width={480}
+                height={320}
                 priority
+                loading="eager"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

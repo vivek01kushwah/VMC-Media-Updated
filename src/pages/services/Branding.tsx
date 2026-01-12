@@ -45,9 +45,10 @@ const BrandingService = () => {
               <Image
                 src="/brand.webp"
                 alt="Brand Design"
-                width={600}
-                height={400}
+                width={480}
+                height={320}
                 priority
+                loading="eager"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
