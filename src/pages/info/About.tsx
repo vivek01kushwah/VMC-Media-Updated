@@ -77,7 +77,7 @@ const About = () => {
                 {/* Main Large Image */}
                 <div className="col-span-2 relative z-10 rounded-2xl overflow-hidden">
                   <Image
-                    src="/about top.webp"
+                    src="/about-top.webp"
                     alt="Team collaboration"
                     width={600}
                     height={240}
@@ -96,7 +96,7 @@ const About = () => {
                 {/* Two Smaller Images Below */}
                 <div className="relative rounded-xl overflow-hidden">
                   <Image
-                    src="/about vmc Down.webp"
+                    src="/about-vmc-down.webp"
                     alt="Team meeting"
                     width={280}
                     height={140}

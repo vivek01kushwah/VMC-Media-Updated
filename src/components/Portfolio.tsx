@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Real Estate",
     category: "SEO & Local Marketing",
-    image: "/real Estate.webp",
+    image: "/real-estate.webp",
     result: "+185% Property Inquiries in 5 Months",
     color: "bg-accent",
     slug: "real-estate",
