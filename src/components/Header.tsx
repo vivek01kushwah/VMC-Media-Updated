@@ -58,7 +58,7 @@ const Header = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
             <img 
-              src="/logo vm.png" 
+              src="/logo-vm.png" 
               alt="VMC Media Logo" 
               className="h-12 w-auto"
             />

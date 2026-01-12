@@ -35,7 +35,7 @@ const projects = [
   {
     title: "Ecommerce",
     category: "Performance Marketing & CRO",
-    image: "/ecommerce.webp",
+    image: "/Ecommerce.webp",
     result: "+340% Revenue | 65% Lower CAC",
     color: "bg-accent",
     slug: "ecommerce",
