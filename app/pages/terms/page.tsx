@@ -1,15 +1,8 @@
-'use client'
-
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import { TermsPageClient } from "./client"
 
 export default function TermsPage() {
-  return (
-    <div className="min-h-screen">
-<Header />
-<section className="pt-32 pb-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
+  return <TermsPageClient />
+}
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-muted-foreground mb-6">Last updated: December 4, 2025</p>
             

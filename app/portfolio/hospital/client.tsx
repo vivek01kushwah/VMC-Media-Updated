@@ -1,45 +1,48 @@
-import { RealEstatePortfolioClient } from "./client"
+'use client'
 
-export default function RealEstatePortfolio() {
-  return <RealEstatePortfolioClient />
-}
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import Image from "next/image"
+import { CheckCircle2, Users, Stethoscope, TrendingUp, Clock } from 'lucide-react'
+
+export function HospitalPortfolioClient() {
   const projects = [
     {
       id: 1,
-      name: "Luxury Apartment Complex - Delhi",
-      description: "Marketed a premium 200-unit residential complex with SEO, digital ads, and virtual tours",
-      results: "450 inquiries in 3 months, 85 units sold",
-      image: "/Delhi.webp"
+      name: "Multi-Specialty Hospital - Delhi",
+      description: "Comprehensive healthcare marketing for 500+ bed hospital with focus on specialized departments",
+      results: "8500 patient inquiries, 40% increase in OPD consultations",
+      image: "/hospital_Delhi.webp"
     },
     {
       id: 2,
-      name: "Commercial Real Estate - Bangalore",
-      description: "Promoted office spaces and retail units across 5 locations with targeted campaigns",
-      results: "1200 leads, 35 leases signed",
-      image: "/Bangalore.webp"
+      name: "Cardiac Care Center - Mumbai",
+      description: "Specialized cardiac services marketing targeting high-risk patients and referrals",
+      results: "320 cardiac procedures scheduled, 85% patient satisfaction",
+      image: "/hospital_mumbai.webp"
     },
     {
       id: 3,
-      name: "Residential Villas - Mumbai",
-      description: "High-end villa community marketing with property showcase and buyer targeting",
-      results: "280 qualified leads, 42 sales",
-      image: "/Mumbai.webp"
+      name: "Diagnostic Center Chain - Pan India",
+      description: "Multi-city diagnostic center promotion with online appointment booking system",
+      results: "12000 online bookings, 150% revenue increase",
+      image: "/pan_india_daignostic.webp"
     },
     {
       id: 4,
-      name: "Budget Housing Project - Pune",
-      description: "Mass market housing project with social media and local SEO optimization",
-      results: "2100 inquiries, 380 bookings",
-      image: "/Pune.webp"
+      name: "Orthopedic & Joint Center - Bangalore",
+      description: "Specialized orthopedic services marketing for joint replacement and sports medicine",
+      results: "1850 patient registrations, 65 surgeries booked",
+      image: "/orthopedic_bangalore.webp"
     }
-  ];
+  ]
 
   const benefits = [
-    { icon: TrendingUp, title: "Increased Visibility", description: "300% increase in property inquiries through digital marketing" },
-    { icon: Users, title: "Targeted Buyers", description: "Reach qualified buyers through precise audience targeting" },
-    { icon: Home, title: "Faster Sales", description: "Reduce time-to-sale by 40% with strategic marketing" },
-    { icon: MapPin, title: "Local SEO", description: "Dominate local searches for real estate in your area" }
-  ];
+    { icon: Users, title: "Patient Acquisition", description: "Attract more patients through targeted healthcare marketing" },
+    { icon: TrendingUp, title: "Revenue Growth", description: "Increase OPD visits and specialized service utilization" },
+    { icon: Clock, title: "24/7 Availability", description: "Online appointment booking and emergency service promotion" },
+    { icon: Stethoscope, title: "Doctor Visibility", description: "Showcase specialist doctors and build trust with patients" }
+  ]
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -48,11 +51,11 @@ export default function RealEstatePortfolio() {
         <section className="pt-32 pb-2 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Real Estate Portfolio
+              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-7">
+                Hospital & Healthcare Portfolio
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Successful real estate marketing campaigns with proven results across residential, commercial, and luxury segments
+                Proven healthcare marketing strategies to increase patient engagement and hospital revenue
               </p>
             </div>
           </div>
@@ -60,7 +63,7 @@ export default function RealEstatePortfolio() {
 
         <section className="pt-2 pb-8 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-foreground mb-8">Featured Real Estate Projects</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8">Featured Hospital & Healthcare Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all">
@@ -90,7 +93,7 @@ export default function RealEstatePortfolio() {
 
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-10 text-center">Why Choose Our Real Estate Marketing</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10 text-center">Why Choose Our Healthcare Marketing</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:shadow-lg transition-all text-center">
@@ -105,12 +108,12 @@ export default function RealEstatePortfolio() {
 
         <section className="py-12 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-10 text-center">Our Approach</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10 text-center">Our Healthcare Marketing Strategy</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Market Analysis", desc: "Deep dive into your property market and competition analysis" },
-                { step: "02", title: "Strategic Marketing", desc: "Custom digital campaigns targeting qualified buyers" },
-                { step: "03", title: "Lead Generation", desc: "Continuous optimization for maximum conversions" }
+                { step: "01", title: "Service Promotion", desc: "Highlight specialized services and department expertise" },
+                { step: "02", title: "Patient Acquisition", desc: "Multi-channel campaigns to attract new patients" },
+                { step: "03", title: "Retention & Growth", desc: "Build patient loyalty and increase service utilization" }
               ].map((item, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -126,5 +129,5 @@ export default function RealEstatePortfolio() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

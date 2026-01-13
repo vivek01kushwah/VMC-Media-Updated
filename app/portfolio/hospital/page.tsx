@@ -1,11 +1,8 @@
-'use client'
-
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import Image from "next/image"
-import { CheckCircle2, Users, Stethoscope, TrendingUp, Clock } from 'lucide-react';
+import { HospitalPortfolioClient } from "./client"
 
 export default function HospitalPortfolio() {
+  return <HospitalPortfolioClient />
+}
   const projects = [
     {
       id: 1,

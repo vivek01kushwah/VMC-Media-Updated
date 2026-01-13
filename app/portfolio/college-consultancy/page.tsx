@@ -1,11 +1,8 @@
-'use client'
-
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import Image from "next/image"
-import { CheckCircle2, Users, BookOpen, Target, TrendingUp } from 'lucide-react';
+import { CollegeConsultancyPortfolioClient } from "./client"
 
 export default function CollegeConsultancyPortfolio() {
+  return <CollegeConsultancyPortfolioClient />
+}
   const projects = [
     {
       id: 1,

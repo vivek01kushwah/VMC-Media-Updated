@@ -1,11 +1,8 @@
-'use client'
-
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import Image from "next/image"
-import { CheckCircle2, ShoppingCart, TrendingUp, Zap, Users } from 'lucide-react';
+import { EcommercePortfolioClient } from "./client"
 
 export default function EcommercePortfolio() {
+  return <EcommercePortfolioClient />
+}
   const projects = [
     {
       id: 1,

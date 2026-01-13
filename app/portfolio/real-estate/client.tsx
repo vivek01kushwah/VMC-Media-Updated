@@ -1,8 +1,11 @@
-import { RealEstatePortfolioClient } from "./client"
+'use client'
 
-export default function RealEstatePortfolio() {
-  return <RealEstatePortfolioClient />
-}
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import Image from "next/image"
+import { CheckCircle2, Home, MapPin, TrendingUp, Users } from 'lucide-react'
+
+export function RealEstatePortfolioClient() {
   const projects = [
     {
       id: 1,
@@ -32,14 +35,14 @@ export default function RealEstatePortfolio() {
       results: "2100 inquiries, 380 bookings",
       image: "/Pune.webp"
     }
-  ];
+  ]
 
   const benefits = [
     { icon: TrendingUp, title: "Increased Visibility", description: "300% increase in property inquiries through digital marketing" },
     { icon: Users, title: "Targeted Buyers", description: "Reach qualified buyers through precise audience targeting" },
     { icon: Home, title: "Faster Sales", description: "Reduce time-to-sale by 40% with strategic marketing" },
     { icon: MapPin, title: "Local SEO", description: "Dominate local searches for real estate in your area" }
-  ];
+  ]
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -126,5 +129,5 @@ export default function RealEstatePortfolio() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

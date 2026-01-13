@@ -1,16 +1,6 @@
-'use client'
-
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import { LocalSEOPageClient } from "./client"
 
 export default function LocalSEOPage() {
-  const LocalSEOComponent = require('@/pages/services/LocalSEO').default
-  return (
-    <div className="min-h-screen">
-<Header />
-<LocalSEOComponent />
-      <Footer />
-    </div>
-  )
+  return <LocalSEOPageClient />
 }
 

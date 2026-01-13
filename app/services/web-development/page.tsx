@@ -1,16 +1,6 @@
-'use client'
-
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WebDevComponent from "@/components/services/WebDevelopment";
+import { WebDevPageClient } from "./client"
 
 export default function WebDevelopmentPage() {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <WebDevComponent />
-      <Footer />
-    </div>
-  );
+  return <WebDevPageClient />
 }
 
