@@ -1,16 +1,9 @@
+'use client'
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Image from "next/image"
-import { Metadata } from "next"
 import { CheckCircle2, Users, BookOpen, Target, TrendingUp } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Education Marketing | College Admissions Case Studies | VMC Media',
-  description: 'College and education marketing success stories. Engineering colleges, medical schools with 3500+ applications, 42% admission growth, 380 students enrolled.',
-  alternates: {
-    canonical: 'https://vmcmedia.com/portfolio/college-consultancy',
-  },
-}
 
 export default function CollegeConsultancyPortfolio() {
   const projects = [

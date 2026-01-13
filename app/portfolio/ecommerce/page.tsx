@@ -1,16 +1,9 @@
+'use client'
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Image from "next/image"
-import { Metadata } from "next"
 import { CheckCircle2, ShoppingCart, TrendingUp, Zap, Users } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'E-commerce Success Stories | Portfolio Case Studies | VMC Media',
-  description: 'Explore our e-commerce marketing case studies. Multi-brand stores, fashion platforms, electronics marketplaces with proven results: 2.5Cr+ annual revenue, 3.2x ROAS.',
-  alternates: {
-    canonical: 'https://vmcmedia.com/portfolio/ecommerce',
-  },
-}
 
 export default function EcommercePortfolio() {
   const projects = [

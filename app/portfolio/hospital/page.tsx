@@ -1,16 +1,9 @@
+'use client'
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Image from "next/image"
-import { Metadata } from "next"
 import { CheckCircle2, Users, Stethoscope, TrendingUp, Clock } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Healthcare Marketing Case Studies | Hospital SEO | VMC Media',
-  description: 'Hospital and healthcare marketing success stories. Multi-specialty hospitals, cardiac centers with 8500+ patient inquiries, 40% OPD growth, proven healthcare marketing expertise.',
-  alternates: {
-    canonical: 'https://vmcmedia.com/portfolio/hospital',
-  },
-}
 
 export default function HospitalPortfolio() {
   const projects = [

@@ -1,6 +1,7 @@
+'use client'
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 const blogSlugs = [
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts: Record<string, { title: string; excerpt: string }> = {
     "ai-powered-seo": {
       title: "AI-Powered SEO: What Actually Works",
