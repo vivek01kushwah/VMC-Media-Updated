@@ -1,14 +1,28 @@
 "use client";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import "@/styles/floating-labels.css";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,6 +30,19 @@ const Contact = () => {
       title: "Message sent!",
       description: "We'll get back to you as soon as possible.",
     });
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -54,7 +81,7 @@ const Contact = () => {
               {
                 icon: Mail,
                 title: "Email Us",
-                content: "Info@vmcmedia.in",
+                content: "support@vmcmedia.in",
                 subtext: "We reply within 24 hours",
               },
               {
@@ -85,57 +112,90 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="border-border animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        First Name *
-                      </label>
-                      <Input required placeholder="John" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Last Name *
-                      </label>
-                      <Input required placeholder="Doe" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Email *
+                <h2 className="text-3xl font-bold text-primary mb-6">Send us a Message</h2>
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  {/* Full Name */}
+                  <div className="floating-label-container">
+                    <input
+                      id="fullName"
+                      name="fullName"
+                      type="text"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      placeholder=" "
+                      required
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                    />
+                    <label htmlFor="fullName" className="floating-label">
+                      Full Name
                     </label>
-                    <Input type="email" required placeholder="john@example.com" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+
+                  {/* Email */}
+                  <div className="floating-label-container">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder=" "
+                      required
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                    />
+                    <label htmlFor="email" className="floating-label">
+                      Email Address
+                    </label>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="floating-label-container">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder=" "
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                    />
+                    <label htmlFor="phone" className="floating-label">
                       Phone Number
                     </label>
-                    <Input type="tel" placeholder="+1 (555) 123-4567" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Service Interested In
-                    </label>
-                    <select className="w-full h-10 px-3 rounded-md border border-input bg-background text-foreground">
-                      <option>Search Engine Optimization (SEO)</option>
-                      <option>Social Media Marketing (SMM)</option>
-                      <option>Google Ads & PPC Campaigns</option>
-                      <option>Website Development & UI/UX</option>
-                      <option>Branding & Creative Services</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Message *
-                    </label>
-                    <Textarea
+
+                  {/* Service Dropdown */}
+                  <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
+                    <SelectTrigger className="w-full h-10 text-sm border-gray-300 focus:ring-[hsl(var(--accent))]">
+                      <SelectValue placeholder="I'm interested in..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="seo">SEO Services</SelectItem>
+                      <SelectItem value="smm">Social Media Marketing</SelectItem>
+                      <SelectItem value="ppc">Google Ads & PPC</SelectItem>
+                      <SelectItem value="web">Website Development</SelectItem>
+                      <SelectItem value="branding">Branding & Design</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+
+                  {/* Message */}
+                  <div className="floating-label-container">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder=" "
                       required
-                      placeholder="Tell us about your project..."
-                      className="min-h-32"
+                      className="floating-textarea w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all resize-none"
                     />
+                    <label htmlFor="message" className="floating-textarea-label">
+                      Tell us about your project
+                    </label>
                   </div>
+
                   <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                     Send Message
                   </Button>

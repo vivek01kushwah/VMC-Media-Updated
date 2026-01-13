@@ -36,7 +36,7 @@ export default function TermsPage() {
             <p>The materials appearing on VMC Media's website could include technical, typographical, or photographic errors. VMC Media does not warrant that any of the materials on its website are accurate, complete or current.</p>
             
             <h2>Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us at Info@vmcmedia.in</p>
+            <p>If you have any questions about these Terms, please contact us at support@vmcmedia.in</p>
 <Header />
 </div>
         </div>

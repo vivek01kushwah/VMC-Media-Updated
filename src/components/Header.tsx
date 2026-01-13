@@ -8,12 +8,13 @@ import { Menu, X, ChevronDown, Search, Share2, Target, Globe, PenTool, BarChart3
 import { NavLink } from "@/components/NavLink";
 import ThemeToggle from "@/components/ThemeToggle";
 import GetStartedModal from "@/components/GetStartedModal";
+import { useModal } from "@/context/ModalContext";
 
 const Header = () => {
+  const { isModalOpen, openModal, closeModal } = useModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const services = {
     core: [
@@ -190,7 +191,7 @@ const Header = () => {
             </div>
             <ThemeToggle />
             <Button 
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => openModal()}
               className="hidden lg:inline-flex bg-gradient-to-r from-accent to-secondary hover:from-accent/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all"
             >
               Get Started
@@ -313,7 +314,7 @@ const Header = () => {
                 <div className="px-4">
                   <Button 
                     onClick={() => {
-                      setIsModalOpen(true);
+                      openModal();
                       setIsMenuOpen(false);
                     }}
                     className="w-full bg-gradient-to-r from-accent to-secondary hover:from-accent/90 hover:to-secondary/90 text-white shadow-lg"
@@ -328,7 +329,7 @@ const Header = () => {
       </div>
 
       {/* Get Started Modal */}
-      <GetStartedModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <GetStartedModal isOpen={isModalOpen} onClose={closeModal} />
     </header>
   );
 };

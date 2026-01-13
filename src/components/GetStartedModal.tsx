@@ -3,6 +3,13 @@
 import { X } from "lucide-react";
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface GetStartedModalProps {
   isOpen: boolean;
@@ -24,6 +31,19 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
     setMounted(true);
   }, []);
 
+  // Reset form data when modal is closed
+  useEffect(() => {
+    if (!isOpen) {
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        interest: "",
+        message: "",
+      });
+    }
+  }, [isOpen]);
+
   // Close on Esc and lock scroll
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -34,7 +54,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
 
     // Check if window exists (client-side only)
     if (typeof window === 'undefined') return;
-    
+
     if (isOpen) {
       document.addEventListener("keydown", handleEscape);
       const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth || 0;
@@ -110,7 +130,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
         
         .floating-textarea:focus ~ .floating-textarea-label,
         .floating-textarea:not(:placeholder-shown) ~ .floating-textarea-label {
-          top: 0;
+          top: -10px;
           transform: translateY(0);
           font-size: 12px;
           color: hsl(var(--accent));
@@ -133,7 +153,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
         
         .floating-select:focus ~ .floating-select-label,
         .floating-select:not([value=""]):valid ~ .floating-select-label {
-          top: 0;
+          top: -10px;
           transform: translateY(0);
           font-size: 12px;
           color: hsl(var(--accent));
@@ -147,7 +167,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
       `}</style>
 
       {/* Fixed positioned backdrop */}
-      <div 
+      <div
         className="fixed inset-0 z-[9999] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4"
         style={{ margin: 0 }}
       >
@@ -191,7 +211,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
                   onChange={handleChange}
                   placeholder=" "
                   required
-                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                 />
                 <label htmlFor="fullName" className="floating-label">
                   Full Name
@@ -208,7 +228,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
                   onChange={handleChange}
                   placeholder=" "
                   required
-                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                 />
                 <label htmlFor="email" className="floating-label">
                   Email Address
@@ -225,7 +245,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
                   onChange={handleChange}
                   placeholder=" "
                   required
-                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                  className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                 />
                 <label htmlFor="phone" className="floating-label">
                   Phone Number
@@ -233,33 +253,20 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
               </div>
 
               {/* Interest Dropdown */}
-              <div className="floating-label-container">
-                <select
-                  id="interest"
-                  name="interest"
-                  value={formData.interest}
-                  onChange={handleChange}
-                  required
-                  className="floating-select w-full h-10 px-3 pr-8 text-sm border border-gray-300 rounded-lg bg-white text-gray-900 appearance-none focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all cursor-pointer"
-                >
-                  <option value="" hidden></option>
-                  <option value="seo">SEO Services</option>
-                  <option value="smm">Social Media Marketing</option>
-                  <option value="ppc">Google Ads & PPC</option>
-                  <option value="web">Website Development</option>
-                  <option value="branding">Branding & Design</option>
-                  <option value="content">Content Marketing</option>
-                  <option value="other">Other</option>
-                </select>
-                <label htmlFor="interest" className="floating-select-label">
-                  I'm interested in...
-                </label>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                  <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 8l4 4 4-4"/>
-                  </svg>
-                </div>
-              </div>
+              <Select value={formData.interest} onValueChange={(value) => setFormData({ ...formData, interest: value })}>
+                <SelectTrigger className="w-full h-10 px-3 text-sm border border-gray-300 rounded-lg bg-white text-gray-900 !placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all [&>span]:text-gray-500 !bg-white !text-gray-900 !dark:bg-white !dark:text-gray-900">
+                  <SelectValue placeholder="I'm interested in..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="seo">SEO Services</SelectItem>
+                  <SelectItem value="smm">Social Media Marketing</SelectItem>
+                  <SelectItem value="ppc">Google Ads & PPC</SelectItem>
+                  <SelectItem value="web">Website Development</SelectItem>
+                  <SelectItem value="branding">Branding & Design</SelectItem>
+                  <SelectItem value="content">Content Marketing</SelectItem>
+                  <SelectItem value="other">Other</SelectItem>
+                </SelectContent>
+              </Select>
 
               {/* Message - Floating Label */}
               <div className="floating-label-container">
@@ -270,7 +277,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder=" "
-                  className="floating-textarea w-full px-3 py-2 text-sm border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all resize-none"
+                  className="floating-textarea w-full px-3 py-2 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all resize-none"
                 />
                 <label htmlFor="message" className="floating-textarea-label">
                   Tell us about your project
@@ -304,7 +311,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
     </>
   );
 
-  return typeof document !== 'undefined' 
+  return typeof document !== 'undefined'
     ? ReactDOM.createPortal(modalContent, document.body)
     : null;
 };

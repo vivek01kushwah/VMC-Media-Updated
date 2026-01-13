@@ -1,7 +1,7 @@
 'use client'
 
-import { useRouter } from "next/navigation";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useModal } from "@/context/ModalContext";
 
 // Mock Button component for demonstration
 const Button = ({ children, size, variant, className, ...props }: any) => (
@@ -11,7 +11,8 @@ const Button = ({ children, size, variant, className, ...props }: any) => (
 );
 
 const CTA = () => {
-  const router = useRouter();
+  const { openModal } = useModal();
+
   return (
     <section className="py-20 bg-gradient-to-br from-primary via-accent to-primary relative overflow-hidden">
       {/* Decorative Elements */}
@@ -34,7 +35,7 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <button onClick={() => router.push('/contact')} className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-white/90 text-lg px-8 py-3 rounded-md font-medium transition-colors group">
+            <button onClick={openModal} className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-white/90 text-lg px-8 py-3 rounded-md font-medium transition-colors group">
               Get a Free Audit
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

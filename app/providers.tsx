@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ThemeProvider } from "next-themes"
 import ErrorBoundary from "@/components/ErrorBoundary"
+import { ModalProvider } from "@/context/ModalContext"
 import { useState } from "react"
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -29,11 +30,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
           enableSystem={false}
           disableTransitionOnChange
         >
-          <TooltipProvider delayDuration={300}>
-            <Toaster />
-            <Sonner />
-            {children}
-          </TooltipProvider>
+          <ModalProvider>
+            <TooltipProvider delayDuration={300}>
+              <Toaster />
+              <Sonner />
+              {children}
+            </TooltipProvider>
+          </ModalProvider>
         </ThemeProvider>
       </QueryClientProvider>
     </ErrorBoundary>
