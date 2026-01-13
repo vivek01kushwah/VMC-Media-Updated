@@ -5,8 +5,11 @@ import { Metadata } from "next";
 import WebDevComponent from "@/components/services/WebDevelopment";
 
 export const metadata: Metadata = {
-  title: "Web Development - VMC Media",
-  description: "Custom web development and design services",
+  title: "Web Development & Digital Growth | SEO-Optimized Sites | VMC Media",
+  description: "Build high-converting websites with expert web development. Responsive design, fast loading speeds, and integrated SEO for sustainable digital growth and increased revenue.",
+  alternates: {
+    canonical: 'https://vmcmedia.com/services/web-development',
+  },
 };
 
 export default function WebDevelopmentPage() {

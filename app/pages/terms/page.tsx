@@ -3,8 +3,11 @@ import Footer from "@/components/Footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions - VMC Media',
-  description: 'Terms and conditions for using our services',
+  title: 'Terms & Conditions - VMC Media | Service Agreement',
+  description: 'Review VMC Media terms and conditions. Understand service agreements, usage policies, and our commitment to client relationships.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/pages/terms',
+  },
 }
 
 export default function TermsPage() {

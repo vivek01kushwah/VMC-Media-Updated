@@ -1,7 +1,16 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Image from "next/image";
+import { Metadata } from "next"
 import { CheckCircle2, Home, MapPin, TrendingUp, Users } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Real Estate Marketing | Property Sales Case Studies | VMC Media',
+  description: 'Real estate marketing case studies: luxury apartments, commercial spaces. 450+ inquiries, 85 units sold, 1200+ leads generated with targeted digital marketing.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/portfolio/real-estate',
+  },
+}
 
 export default function RealEstatePortfolio() {
   const projects = [

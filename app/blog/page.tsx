@@ -3,8 +3,11 @@ import Footer from "@/components/Footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Blog - VMC Media',
-  description: 'Latest insights on SEO, marketing, and digital strategies',
+  title: 'Digital Marketing & SEO Blog | VMC Media Insights',
+  description: 'Discover proven digital marketing strategies, SEO trends, and AI-powered solutions. Expert insights on content optimization, PPC campaigns, and growth hacking from VMC Media.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/blog',
+  },
 }
 
 export default function BlogPage() {

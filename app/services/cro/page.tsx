@@ -3,8 +3,11 @@ import Footer from "@/components/Footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Conversion Rate Optimization - VMC Media',
-  description: 'CRO services to maximize your conversions',
+  title: 'Conversion Rate Optimization | CRO Services | VMC Media',
+  description: 'Maximize conversions with data-driven CRO. A/B testing, user behavior analysis, and checkout optimization to increase sales and revenue.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/services/cro',
+  },
 }
 
 export default function CROPage() {

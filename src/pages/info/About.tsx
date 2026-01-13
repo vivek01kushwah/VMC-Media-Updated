@@ -127,12 +127,12 @@ const About = () => {
                 ABOUT VMC MEDIA
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Full-Service Digital Marketing Agency
+                Award-Winning Full-Service Digital Marketing Agency
               </h2>
               <p className="text-base text-muted-foreground mb-3 leading-relaxed">
                 VMC Media Pvt. Ltd. is a full-service digital marketing agency dedicated to helping businesses thrive in the competitive digital world. With a passion for creativity and a commitment to performance, we deliver solutions that elevate brands and drive revenue growth.
               </p>
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-bold text-foreground mb-2">Our Vision</h3>
                   <p className="text-muted-foreground">

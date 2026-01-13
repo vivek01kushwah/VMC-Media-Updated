@@ -3,8 +3,11 @@ import Footer from "@/components/Footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Local SEO - VMC Media',
-  description: 'Local SEO services to dominate your area',
+  title: 'Local SEO Services | Dominate Local Search Results | VMC Media',
+  description: 'Dominate local search with expert Local SEO. Google My Business optimization, local citations, reviews, and hyperlocal targeting to attract nearby customers.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/services/local-seo',
+  },
 }
 
 export default function LocalSEOPage() {

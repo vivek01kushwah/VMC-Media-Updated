@@ -3,8 +3,11 @@ import Footer from "@/components/Footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - VMC Media',
-  description: 'Our privacy policy and data protection practices',
+  title: 'Privacy Policy - VMC Media | Data Protection & Security',
+  description: 'Read VMC Media privacy policy. Learn how we protect your data, handle personal information, and maintain security standards for your protection.',
+  alternates: {
+    canonical: 'https://vmcmedia.com/pages/privacy',
+  },
 }
 
 export default function PrivacyPage() {

@@ -29,6 +29,7 @@ const Stats = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2" />
       
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-12 text-primary-foreground">Our Track Record</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <div

@@ -50,7 +50,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-12 lg:mb-16 animate-fade-in">
           <span className="inline-block bg-secondary/20 px-6 py-2 rounded-full text-secondary font-semibold text-lg tracking-wider">Our Portfolio</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mt-3 mb-4">
             Our Work Speaks for Itself
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

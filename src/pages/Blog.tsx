@@ -59,6 +59,7 @@ const Blog = () => {
       {/* Blog Grid */}
       <section className="pb-16 lg:pb-20 bg-background">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Latest Articles & Insights</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <div

@@ -42,6 +42,7 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-8 bg-background">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Get In Touch With Us</h2>
           <div className="grid lg:grid-cols-3 gap-8 mb-8">
             {[
               {
