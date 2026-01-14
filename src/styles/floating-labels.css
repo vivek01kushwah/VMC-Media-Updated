@@ -17,9 +17,13 @@
 
 @media (prefers-color-scheme: dark) {
   .floating-label {
-    background: #374151;
-    color: #d1d5db;
+    background: white;
+    color: #6b7280;
   }
+}
+
+.floating-input {
+  transition: all 0.2s ease;
 }
 
 .floating-input:focus ~ .floating-label,
@@ -45,9 +49,13 @@
 
 @media (prefers-color-scheme: dark) {
   .floating-textarea-label {
-    background: #374151;
-    color: #d1d5db;
+    background: white;
+    color: #6b7280;
   }
+}
+
+.floating-textarea {
+  transition: all 0.2s ease;
 }
 
 .floating-textarea:focus ~ .floating-textarea-label,

@@ -66,9 +66,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('about')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/pages/about" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-sm hover:text-white dark:hover:text-white transition-colors">
@@ -76,9 +76,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/contact" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -88,24 +88,24 @@ const Footer = () => {
             <h3 className="text-xl font-bold dark:text-white">Services</h3>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/services/seo" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   SEO Services
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/services/smm" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   Social Media Marketing
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/services/google-ads" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   Google Ads & PPC
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-sm hover:text-white dark:hover:text-white transition-colors">
+                <Link href="/services/web-development" className="text-sm hover:text-white dark:hover:text-white transition-colors">
                   Website Development
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

@@ -112,8 +112,8 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="border-border animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-primary mb-6">Send us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
+                <form onSubmit={handleSubmit} className="space-y-2.5">
                   {/* Full Name */}
                   <div className="floating-label-container">
                     <input
@@ -124,7 +124,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder=" "
                       required
-                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                     />
                     <label htmlFor="fullName" className="floating-label">
                       Full Name
@@ -141,7 +141,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder=" "
                       required
-                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                     />
                     <label htmlFor="email" className="floating-label">
                       Email Address
@@ -157,7 +157,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder=" "
-                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
+                      className="floating-input w-full h-10 px-3 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all"
                     />
                     <label htmlFor="phone" className="floating-label">
                       Phone Number
@@ -166,7 +166,7 @@ const Contact = () => {
 
                   {/* Service Dropdown */}
                   <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                    <SelectTrigger className="w-full h-10 text-sm border-gray-300 focus:ring-[hsl(var(--accent))]">
+                    <SelectTrigger className="w-full h-10 px-3 text-sm border border-gray-300 rounded-lg bg-white text-gray-900 !placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all [&>span]:text-gray-500 !bg-white !text-gray-900">
                       <SelectValue placeholder="I'm interested in..." />
                     </SelectTrigger>
                     <SelectContent>
@@ -184,21 +184,24 @@ const Contact = () => {
                     <textarea
                       id="message"
                       name="message"
-                      rows={4}
+                      rows={3}
                       value={formData.message}
                       onChange={handleChange}
                       placeholder=" "
                       required
-                      className="floating-textarea w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all resize-none"
+                      className="floating-textarea w-full px-3 py-2 text-sm border border-gray-300 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:border-transparent transition-all resize-none"
                     />
                     <label htmlFor="message" className="floating-textarea-label">
                       Tell us about your project
                     </label>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full h-10 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200">
+                    Request Audit
                   </Button>
+                  <p className="text-[10px] text-center text-gray-500 pt-1">
+                    By submitting, you agree to our privacy policy
+                  </p>
                 </form>
               </CardContent>
             </Card>

@@ -16,7 +16,7 @@ const services = [
     icon: Share2,
     title: "Social Media Marketing",
     description: "Build brand presence across Instagram, Facebook, YouTube, and LinkedIn with regional content and influencer campaigns.",
-    color: "bg-secondary",
+    color: "bg-accent",
     link: "/services/smm",
   },
   {
@@ -37,7 +37,7 @@ const services = [
     icon: BarChart3,
     title: "Analytics & Reporting",
     description: "GA4 dashboards, conversion tracking, and monthly reports with actionable insights for your business.",
-    color: "bg-secondary",
+    color: "bg-accent",
     link: "/services/cro",
   },
   {
@@ -51,7 +51,7 @@ const services = [
     icon: PenTool,
     title: "Branding & Design",
     description: "Logo design, brand identity, and visual guidelines that establish market leadership.",
-    color: "bg-secondary",
+    color: "bg-accent",
     link: "/services/branding",
   },
   {
@@ -65,7 +65,7 @@ const services = [
     icon: ShoppingCart,
     title: "E-commerce Marketing",
     description: "Marketplace optimization for Amazon, Flipkart, and independent stores to maximize sales velocity.",
-    color: "bg-secondary",
+    color: "bg-accent",
     link: "/services/ecommerce",
   },
   {
@@ -181,21 +181,21 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 auto-rows-fr">
           {services.map((service, index) => (
             <div
               key={index}
               ref={(el) => {
                 cardsRef.current[index] = el;
               }}
-              className={`group relative bg-card/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-border/50 hover:border-accent/50 shadow-lg hover:shadow-premium-lg transition-all duration-700 hover:-translate-y-2 ${
+              className={`group relative bg-card/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-border/50 hover:border-accent/50 shadow-lg hover:shadow-premium-lg transition-all duration-700 hover:-translate-y-2 flex flex-col h-full ${
                 visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
               {/* Gradient Background on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 {/* Icon with enhanced animation */}
                 <div className={`w-14 h-14 ${service.color} rounded-xl flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                   <service.icon className="w-7 h-7 text-white" />
@@ -206,8 +206,8 @@ const Services = () => {
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                {/* Description - grows to fill available space */}
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
                   {service.description}
                 </p>
 
