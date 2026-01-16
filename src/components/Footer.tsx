@@ -126,8 +126,8 @@ const Footer = () => {
               </li>
               <li className="flex gap-3 text-sm">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <a href="mailto:support@vmcmedia.in" className="hover:text-white dark:hover:text-white transition-colors">
-                  support@vmcmedia.in
+                <a href="mailto:Info@vmcmedia.in" className="hover:text-white dark:hover:text-white transition-colors">
+                  Info@vmcmedia.in
                 </a>
               </li>
             </ul>

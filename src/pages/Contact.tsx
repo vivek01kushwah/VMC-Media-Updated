@@ -23,20 +23,52 @@ const Contact = () => {
     service: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/audit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Success!",
+          description: "Your audit request has been sent. We'll contact you soon!",
+        });
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: data.error || "Failed to send request. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -81,7 +113,7 @@ const Contact = () => {
               {
                 icon: Mail,
                 title: "Email Us",
-                content: "support@vmcmedia.in",
+                content: "Info@vmcmedia.in",
                 subtext: "We reply within 24 hours",
               },
               {
@@ -196,8 +228,13 @@ const Contact = () => {
                     </label>
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full h-10 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200">
-                    Request Audit
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    disabled={isSubmitting}
+                    className="w-full h-10 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Sending..." : "Request Audit"}
                   </Button>
                   <p className="text-[10px] text-center text-gray-500 pt-1">
                     By submitting, you agree to our privacy policy
